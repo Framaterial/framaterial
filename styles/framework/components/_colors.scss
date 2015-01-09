@@ -1,0 +1,134 @@
+// Colors 
+@each $name, $variable in $colors {
+  &[class*="-#{($name)}"]{
+
+
+
+    &[class*=" active"]{
+      background: darken($variable, 1%) !important;
+    }
+
+
+
+
+
+
+  }
+
+  blockquote{
+    &[class*="#{($name)}"]{
+      box-shadow: -.5em 0 0 $variable;
+    }
+  }
+
+  // input{
+  //   &[type*="checkbox" i][class*="#{($name)}"],
+  //   &[type*="radio" i][class*="#{($name)}"],
+  //   &[type*="range" i][class*="#{($name)}"]{  
+  //     color: $variable;
+  //   }
+
+  // }
+  
+
+  [class*="m-card"],
+  [data-card-type*="datepicker"]{
+    &[class*="-#{($name)}"]{
+
+      &:not([data-card-type*="datepicker"]){
+        footer{
+          background-color: $variable;
+          color: #fff !important;
+
+
+          @if $name == 'yellow' 
+          or $name == 'amber'
+          or $name == 'lime'
+          or $name == 'grey'
+          or $name == 'white'{ 
+            color: #000 !important;
+            background-color: #{($variable)};           
+          }
+        }
+      }
+      header,{
+        background-color: $variable;
+        color: #fff;
+
+        @if $name == 'yellow' 
+        or $name == 'amber'
+        or $name == 'lime'
+        or $name == 'grey'
+        or $name == 'white'{ 
+          color: #000 !important;
+          background-color: #{($variable)};           
+        }
+      }
+
+      .pmu-instance .pmu-selected {
+        background-color: #{($variable)} !important;          
+      }
+    }
+  }
+
+  progress[class*="m-progress"]{
+    &[class*="-#{($name)}"]{
+      color: $variable;
+
+      &::-webkit-progress-bar{
+        background: rgba($variable, .3)
+      }
+    }
+  }
+
+  [class*="m-spinner"]{
+    &[class*="-#{($name)}"]{
+      svg .path{
+        stroke: $variable;
+      }
+    }
+  }
+
+}
+
+@each $name, $variable in $colors {
+  input{
+    &[class*="-#{($name)}"]{
+      &~label .ripple{
+        color: $variable;
+      }
+
+      &[type*="radio"]{
+        &~ label {
+          &:before,&:after{
+            color: $variable;
+          }
+        }
+      }
+
+      &[type*="range"]{
+        color: $variable;
+        &:focus:active{
+          &::-webkit-slider-thumb {
+            box-shadow: 0 0 0 12px rgba($variable, .2);
+          }
+        }
+      }
+    }
+  }
+
+   &[class*="-inline-list"]{
+    &[class*="-#{($name)}"]{
+      li{
+        box-shadow: 0 0 1px $variable;
+        color: $variable;
+        a{
+          color: $variable;
+        }
+        &:hover{
+          background: rgba($variable, .1)
+        }
+      }
+    }
+   }
+}

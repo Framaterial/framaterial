@@ -1,0 +1,40 @@
+// Container
+[class*="material-container"]{
+  margin-top: 60px; 
+  position: relative; 
+  z-index: 0;
+  width: 100%;
+  transition:left .3s ease, width .3s ease;
+}
+
+[class*="sidebar-"]{
+  &[data-state*="open"]{
+    + [class*="material-container"]{
+      width: calc(100% - 240px);
+    }
+  }
+
+  &[class*="-left"]{
+    &[data-state*="open"]{
+      + [class*="material-container"]{
+        left: 240px;
+      }
+    }
+  }
+  &[class*="-right"]{
+    &[data-state*="open"]{
+      + [class*="material-container"]{
+        
+      }
+    }
+  }
+
+
+  &[data-state*="open"][class*="-master"]{
+    + [class*="material-container"]{
+      width: 100%;
+      left: 0 !important;
+    }
+  }
+
+}

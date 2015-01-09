@@ -1,0 +1,64 @@
+// Effects
+.ink {
+  display: block; 
+  position: absolute;
+  background: rgba(white, .6);
+  border-radius: 100%;
+  transform: scale(0);
+  z-index: 0;
+}
+
+/*animation effect*/
+.ink.animate {
+  animation: ripple .5s linear;
+
+}
+
+
+  // Hierarchical animations
+  &.hierarchical-timing > * {
+    transform: scale(0);
+  }
+  &.hierarchical-timing > .animated {
+    transform: scale(1);
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+  }
+  &.hierarchical-timing .no-js & > * {
+    transform: scale(1);
+  }
+
+
+
+// Animations
+
+@keyframes inputHighlighter {
+  from { background: currentColor; }
+  to  { width:0; background:transparent; }
+}
+
+@keyframes ripple {
+  100% {
+    opacity: 0; 
+    transform: scale(2.5);
+  }
+}
+
+
+@keyframes progressGrow{
+  0%{
+    transform: scaleY(0) translateY(10px);
+
+  }
+  100%{
+    transform: scaleY(1) translateY(0);
+  }
+}
+
+@keyframes progressIndeterminate{
+  66%{
+    transform: scaleX(.35);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+}

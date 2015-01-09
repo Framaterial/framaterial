@@ -1,0 +1,118 @@
+[class*="-card"] {
+  background: #fff;
+  margin-top: 10px;
+  border-radius: 2px;
+  padding: $bit-padding;
+  overflow: hidden;
+  margin-right: $bit-padding;
+  header {
+    width: calc(100% + 32px ); // bit-padding*2
+    height: 220px;
+    left: -$bit-padding;
+    top: -$bit-padding;
+    position: relative;
+  }
+  section {
+    .title {
+      font-weight: 400;
+      padding: 8px;
+      margin: 0;
+    }
+    p {
+      font-size: 16px;
+      color: rgba(black, 0.6);
+      padding: 0 8px;
+      line-height: 1;
+    }
+  }
+  footer {
+    text-align: right;
+    padding: $bit-padding / 2 $bit-padding;
+    float: left;
+    width: calc(100% + 18px);
+    min-height: 44px;
+    position: relative;
+    top: 14px;
+    left: -9px;
+    a {
+      min-width: 26%;
+    }
+  }
+
+
+  &[data-card-type*="datepicker"]{
+    padding: 0;
+    header{
+      max-height: 180px;
+      padding:0;
+
+      > span{
+        width: 33.33%;
+        float: left;
+        text-align: center;
+        line-height: 80px;
+        font-size: 22px;
+      }
+       .pmu-button, .pmu-button.pmu-month{
+        width: 100%;
+        text-align: center;
+        float: left;
+       }
+    }
+
+    .inner__card{
+      width: calc(100% + 16px);
+      min-height: 200px;
+      background: url('../images/samples/date_sample.png')no-repeat center center; // Change
+      background-size: 100%;
+      margin-left: -8px;
+      position: relative;
+    }
+  }
+
+  
+
+  // Effect of the cards / modals
+  &[data-type*="modal"]{
+    transition: transform .3s ease, margin .3s ease, opacity .4s ease ;
+    position: absolute;
+    top: 10em;
+    left: 0;
+    right: 0; 
+    margin: auto;
+    z-index: 9999;    
+    &.off-screen{
+      transform: scale(0) translate(0, 0);
+      margin-top: -100px;
+      opacity: 0;
+
+      &~ .curtain{
+        opacity: 0 !important;
+        transform: scale(0);
+      }
+    }
+    &.on-screen{
+      transform: scale(1) translate(0, 0);
+      margin-top: 0;
+      opacity: 1;
+    }
+  }
+
+
+ .card-header-text{
+  font-size: 3rem;
+  text-align: center; 
+  @include centerer;
+  color: #fff;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+ } 
+
+
+ ul{
+  padding: 8px;
+  li{
+    padding: 4px 0;
+  }
+ }
+}

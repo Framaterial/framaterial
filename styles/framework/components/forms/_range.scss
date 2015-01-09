@@ -1,0 +1,379 @@
+input{
+  &[type*="range"]{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 2px;
+    //border-width: 2px;
+    padding: 0;
+    //background: currentColor;
+    outline: none;
+    border-radius: 8px;
+    color: transparent;
+    border-width: 0;
+    border-color: transparent;
+
+    &~ label .ripple{
+      display: none !important;
+    }
+
+
+    
+//------------------------------------------------------------------------------
+//
+// Chrome
+//
+//------------------------------------------------------------------------------
+
+&::-webkit-slider-runnable-track {
+  width: auto;
+  height: 2px;
+  //background: currentColor;
+  border: none;
+  border-radius: 8px;      
+}
+
+&::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: currentColor;
+  margin-top: -7px;
+  transition: width .15s ease, height .15s ease, margin .15s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+
+  &:after{
+    content:'';        
+    position: absolute;
+    top: -38px!important;
+  }
+
+
+}
+
+&:active{
+  &::-webkit-slider-thumb {
+   height: 28px;
+   width: 28px;
+   margin-top: -14px;
+   transition: box-shadow .2s ease;
+ }
+}
+&:focus:active{
+  &::-webkit-slider-thumb {
+   box-shadow: 0 0 0 12px rgba(white, .3)
+ }
+}
+
+
+
+//------------------------------------------------------------------------------
+//
+// Firefox
+//
+//------------------------------------------------------------------------------
+&::-moz-range-track {
+  width: auto;
+  height: 2px;
+  background: currentColor;
+  border: none;
+  border-radius: 8px;
+}
+
+&::-moz-range-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: currentColor;
+  margin-top: -7px;
+  transition: width .15s ease, height .15s ease, margin .15s ease;
+  cursor: pointer;
+
+  &:after{
+    content:'';        
+    position: absolute;
+    top: -38px!important;
+  }
+
+
+}
+
+&:active, 
+&:-moz-focusring{
+  &::-moz-range-thumb {
+   height: 28px;
+   width: 28px;
+   margin-top: -14px;
+ }
+}
+
+
+
+//------------------------------------------------------------------------------
+//
+// MS IE
+//
+//------------------------------------------------------------------------------
+
+&::-ms-fill-lower,
+&::-ms-fill-upper {
+  width: auto;
+  height: 2px;
+  background: currentColor;
+  border: none;
+  border-radius: 8px;
+}
+
+&::-ms-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: currentColor;
+  margin-top: -7px;
+  transition: width .15s ease, height .15s ease, margin .15s ease;
+  cursor: pointer;
+
+  &:after{
+    content:'';        
+    position: absolute;
+    top: -38px!important;
+  }
+
+
+}
+
+&:active{
+  &::-ms-thumb {
+   height: 28px;
+   width: 28px;
+   margin-top: -14px;
+ }
+}
+
+//------------------------------------------------------------------------------
+//
+// Expanded output
+//
+//------------------------------------------------------------------------------
+
+&[data-output-expand*="true"]{
+ &::-webkit-slider-thumb{
+  &:before{
+    display: block;
+    content: '';
+    background: currentColor;
+    width: 26px;
+    height: 26px;
+    margin-left: 3px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg) scale(0) translate(0);
+    transition: transform .2s ease;
+    top: -28px!important;
+    position: absolute;
+
+  }
+  &:after{
+    transform: rotate(-45deg) scale(0) translate(0);
+    transition: transform .1s ease;
+    font-size: 12px;
+    font-weight: 600;
+    width: 100%;
+    left: 55%;
+    top: 50%;
+    text-align: center;
+  }
+
+}
+&:active{
+  &::-webkit-slider-thumb{
+    &:before{
+      transform: rotate(-45deg) scale(1) translate(17px, -17px);
+    }
+    &:after{
+      color: #fff;
+      transform: rotate(0deg) scale(1) translate(-50%, -50%);
+      transition: transform .3s ease;
+
+    }
+  }
+}
+
+&::-moz-range-thumb{
+  &:before{
+    display: block;
+    content: '';
+    background: currentColor;
+    width: 26px;
+    height: 26px;
+    margin-left: 3px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg) scale(0) translate(0);
+    transition: transform .2s ease;
+    top: -28px!important;
+    position: absolute;
+  }
+  &:after{
+    transform: rotate(-45deg) scale(0) translate(0);
+    transition: transform .1s ease;
+    font-size: 12px;
+    font-weight: 600;
+    width: 100%;
+    left: 55%;
+    top: 50%;
+    text-align: center;
+  }
+}
+&:active{
+  &::-moz-range-thumb{
+    &:before{
+      transform: rotate(-45deg) scale(1) translate(17px, -17px);
+    }
+    &:after{
+      color: #fff;
+      transform: rotate(0deg) scale(1) translate(-50%, -50%);
+      transition: transform .3s ease;
+
+    }
+  }
+}
+
+&::-ms-thumb{
+  &:before{
+    display: block;
+    content: '';
+    background: currentColor;
+    width: 26px;
+    height: 26px;
+    margin-left: 3px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg) scale(0) translate(0);
+    transition: transform .2s ease;
+    top: -28px!important;
+    position: absolute;
+  }
+  &:after{
+    transform: rotate(-45deg) scale(0) translate(0);
+    transition: transform .1s ease;
+    font-size: 12px;
+    font-weight: 600;
+    width: 100%;
+    left: 55%;
+    top: 50%;
+    text-align: center;
+  }
+}
+&:active{
+  &::-ms-thumb{
+    &:before{
+      transform: rotate(-45deg) scale(1) translate(17px, -17px);
+    }
+    &:after{
+      color: #fff;
+      transform: rotate(0deg) scale(1) translate(-50%, -50%);
+      transition: transform .3s ease;
+
+    }
+  }
+}
+
+}
+
+//------------------------------------------------------------------------------
+//
+// Steps
+//
+//------------------------------------------------------------------------------
+
+// TODO Steps
+
+//------------------------------------------------------------------------------
+//
+// Different states | According to http://www.google.com/design/spec/components/sliders.html#
+//
+//------------------------------------------------------------------------------
+&[value="0"]{
+  background: #B3B3B3;
+  color: transparent !important;
+
+  // Webkit
+  &::-webkit-slider-runnable-track{
+    background: #B3B3B3;
+  }
+  &::-webkit-slider-thumb{
+    background: transparent;
+    background-color: #EAEAEA;
+    border:2px solid #B3B3B3;
+    &:after{
+      color: #B3B3B3;
+    }
+  }
+
+  &:focus,
+  &:focus:active{
+    &::-webkit-slider-thumb{
+      background: #fff;
+    }
+  }
+
+  
+  // Mozilla
+  &::-moz-range-track{
+    background: #B3B3B3;
+  }
+  &::-moz-range-thumb{
+    background: transparent;
+    background-color: #EAEAEA;
+    border:2px solid #B3B3B3;
+    &:after{
+      color: #B3B3B3;
+    }
+  }
+
+  &:focus,
+  &:focus:active, 
+  &:-moz-focusring{
+    &::-moz-range-thumb{
+      background: #fff;
+    }
+  }
+
+  // MS IE
+  &::-ms-fill-lower,
+  &::-ms-fill-upper{
+    background: #B3B3B3;
+  }
+  &::-ms-thumb{
+    background: transparent;
+    background-color: #EAEAEA;
+    border:2px solid #B3B3B3;
+    &:after{
+      color: #B3B3B3;
+    }
+  }
+
+  &:focus,
+  &:focus:active{
+    &::-ms-thumb{
+      background: #fff;
+    }
+  }
+
+}
+
+
+
+}
+}

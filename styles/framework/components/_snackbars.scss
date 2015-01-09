@@ -1,0 +1,34 @@
+$positions: 'top','left','right','bottom';
+[class*="m-snackbar"]{
+  margin: 1em;
+  position: fixed;
+  background: rgba(black, .7);
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 100px;
+  transition: top .3s ease;
+  float: left;
+  min-width: 216px;
+  max-width: 426px;
+  width: auto;
+  max-height: 66px;
+  transition: all .3s ease;
+  p{font-size: 14px;}
+
+
+
+@each $pos in $positions{
+  &[class*="#{($pos)}"]{
+    #{($pos)}:-100%;
+    transition: #{($pos)} .3s ease;
+
+    &.on-screen{
+    #{($pos)}:0;
+    float: left;
+    transition: #{($pos)} .3s ease;
+  }
+  }
+  
+}
+
+}

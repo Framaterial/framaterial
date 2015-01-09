@@ -1,0 +1,276 @@
+// Typography
+ul li a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 500;
+    padding: .25rem .25rem
+}
+h1{
+    font-size: 42px;
+}
+h2{
+    font-size: 34px;
+}
+h3{
+    font-size: 26px;
+}
+h4{
+    font-size: 18px;
+}
+h5{
+    font-size: 15px;
+}
+
+@media only screen and (min-width: 360px) {
+    .flow-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 0px) {
+    .flow-text {
+        //line-height: 0.8em;
+    }
+}
+
+@media only screen and (min-width: 390px) {
+    .flow-text {
+        font-size: 1.224rem;
+    }
+}
+
+@media only screen and (min-width: 30px) {
+    .flow-text {
+        //line-height: 0.904em;
+    }
+}
+
+@media only screen and (min-width: 420px) {
+    .flow-text {
+        font-size: 1.248rem;
+    }
+}
+
+@media only screen and (min-width: 60px) {
+    .flow-text {
+        //line-height: 1.008em;
+    }
+}
+
+@media only screen and (min-width: 450px) {
+    .flow-text {
+        font-size: 1.272rem;
+    }
+}
+
+@media only screen and (min-width: 90px) {
+    .flow-text {
+        //line-height: 1.112em;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .flow-text {
+        font-size: 1.296rem;
+    }
+}
+
+@media only screen and (min-width: 120px) {
+    .flow-text {
+        //line-height: 1.216em;
+    }
+}
+
+@media only screen and (min-width: 510px) {
+    .flow-text {
+        font-size: 1.32rem;
+    }
+}
+
+@media only screen and (min-width: 150px) {
+    .flow-text {
+        //line-height: 1.32em;
+    }
+}
+
+@media only screen and (min-width: 540px) {
+    .flow-text {
+        font-size: 1.344rem;
+    }
+}
+
+@media only screen and (min-width: 180px) {
+    .flow-text {
+        //line-height: 1.424em;
+    }
+}
+
+@media only screen and (min-width: 570px) {
+    .flow-text {
+        font-size: 1.368rem;
+    }
+}
+
+@media only screen and (min-width: 210px) {
+    .flow-text {
+        //line-height: 1.528em;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .flow-text {
+        font-size: 1.392rem;
+    }
+}
+
+@media only screen and (min-width: 240px) {
+    .flow-text {
+        line-height: 1.632em;
+    }
+}
+
+@media only screen and (min-width: 630px) {
+    .flow-text {
+        font-size: 1.416rem;
+    }
+}
+
+@media only screen and (min-width: 270px) {
+    .flow-text {
+        //line-height: 1.736em;
+    }
+}
+
+@media only screen and (min-width: 660px) {
+    .flow-text {
+        font-size: 1.44rem;
+    }
+}
+
+@media only screen and (min-width: 300px) {
+    .flow-text {
+        //line-height: 1.84em;
+    }
+}
+
+@media only screen and (min-width: 690px) {
+    .flow-text {
+        font-size: 1.464rem;
+    }
+}
+
+@media only screen and (min-width: 330px) {
+    .flow-text {
+        //line-height: 1.944em;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .flow-text {
+        font-size: 1.488rem;
+    }
+}
+
+@media only screen and (min-width: 360px) {
+    .flow-text {
+        //line-height: 2.048em;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .flow-text {
+        font-size: 1.512rem;
+    }
+}
+
+@media only screen and (min-width: 390px) {
+    .flow-text {
+        //line-height: 2.152em;
+    }
+}
+
+@media only screen and (min-width: 780px) {
+    .flow-text {
+        font-size: 1.536rem;
+    }
+}
+
+@media only screen and (min-width: 420px) {
+    .flow-text {
+        //line-height: 2.256em;
+    }
+}
+
+@media only screen and (min-width: 810px) {
+    .flow-text {
+        font-size: 1.56rem;
+    }
+}
+
+@media only screen and (min-width: 450px) {
+    .flow-text {
+        //line-height: 2.36em;
+    }
+}
+
+@media only screen and (min-width: 840px) {
+    .flow-text {
+        font-size: 1.584rem;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .flow-text {
+        //line-height: 2.464em;
+    }
+}
+
+@media only screen and (min-width: 870px) {
+    .flow-text {
+        font-size: 1.608rem;
+    }
+}
+
+@media only screen and (min-width: 510px) {
+    .flow-text {
+        //line-height: 2.568em;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .flow-text {
+        font-size: 1.632rem;
+    }
+}
+
+@media only screen and (min-width: 540px) {
+    .flow-text {
+        //line-height: 2.672em;
+    }
+}
+
+@media only screen and (min-width: 930px) {
+    .flow-text {
+        font-size: 1.656rem;
+    }
+}
+
+@media only screen and (min-width: 570px) {
+    .flow-text {
+        //line-height: 2.776em;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .flow-text {
+        font-size: 1.68rem;
+    }
+}
+
+
+
+.panel .flow-text{
+   font-size: 1.25em;
+   //line-height: 1.6em;
+}

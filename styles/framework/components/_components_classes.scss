@@ -1,0 +1,34 @@
+// Divider
+
+.divider{
+  background: rgba(black, .1);
+  position: relative;
+  display: block;
+  float: left;
+  width: 100%;
+  height: 1px;
+  margin: 8px 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+// Font-weight
+@each $weight in $weights {
+  p.fw-#{$weight}{
+    font-weight: #{$weight};
+  }
+}
+
+// Curtain 
+.curtain{
+  width: 100%;
+  height: 100%;
+  float: left;
+  position: fixed;
+  
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  background: rgba(#000, .75);
+  transition: transform .1s ease, opacity .2s ease;
+}

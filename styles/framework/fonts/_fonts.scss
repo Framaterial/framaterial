@@ -1,0 +1,13 @@
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:100,200,300,400,700|Roboto:100,200,300,400,500,600);
+
+// The natural font for Material is the Roboto
+// But you can use the Noto-font instead, by wrapping your 
+// Desired element with the class .noto-font
+
+[class*="material-"]{
+  .noto-font{
+    p, a, h1, h2, h3, h4, h5, h6, blockquote, small, strong{
+      font-family: Noto Sans, sans-serif;
+    }
+  }
+}

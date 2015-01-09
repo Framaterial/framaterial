@@ -1,0 +1,129 @@
+input{
+  /* Base for label styling */
+  &[type="checkbox"]:not(:checked),
+  &[type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  &[type="checkbox"]:not(:checked) + label,
+  &[type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+  }
+
+  &[type*="checkbox"]{    
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    border: 0 !important;
+    padding: .35em !important;
+    margin: .5em;
+    background: currentColor;
+    cursor: pointer;
+  }
+}
+
+label[for*="ck"]{
+  display: block;
+  font-size: .8em;
+  position: relative;
+  padding-left: 40px !important;
+  
+  &:before, &:after{
+    content:'';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 3px solid #5a5a5a;
+    background: transparent;
+    transition: background .1s ease, transform .2s ease .1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 50% 50%;
+    cursor: pointer;
+  }
+
+  &:after{
+    transform: scale(0) rotate(-180deg);
+    content:'\e623';
+    background: transparent;
+    border: none;
+    font-family: "Material-Design-Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    color: $c-green;
+    font-size: 1.7em;
+    line-height: .6;    
+    text-align: center;
+  }
+
+  .ripple{
+    width: 45px;
+    height: 45px;
+    background: currentColor;
+    display: block;
+    position: absolute;
+    top: -11px;
+    left: -11px;
+    border-radius: 100%;
+    opacity: .25;
+    transform: scale(0);
+    transition: transform .2s ease;
+
+  }
+}
+
+
+input[type*="checkbox"]:active{
+  &~ label{
+    .ripple{
+      transform: scale(.9);
+    }
+  }
+
+  &:checked{
+    &~ label{
+      .ripple{
+        transform: scale(1) !important;
+        background: rgba(black, .5) !important;
+      }
+    }
+  }
+}
+input[type*="checkbox"][disabled]:active{
+  &~ label{
+    .ripple{
+      transform: scale(0)
+    }
+  }
+}
+input[type*="checkbox"]:checked{
+
+ &~ label{
+  &:after{
+    transform: scale(1) rotate(0deg);
+  }
+
+  &:before{
+    transform: scale(0) rotate(-180deg);
+  }
+}
+
+
+}
+[disabled],
+[disabled]:checked{
+  &~ label{
+    &:before,
+    &:after{
+      cursor: not-allowed !important;
+      opacity: .4 !important;
+    }
+  }
+}
+
+

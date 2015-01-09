@@ -1,0 +1,218 @@
+// Navigation
+[class*="material-navigation"]{
+
+  &[class*="fixed"]{
+    position: fixed;
+  }
+  &[class*="absolute"]{
+    position: absolute;
+  }
+
+  box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+  box-sizing: border-box;
+  color: rgb(33, 33, 33);
+  height: 60px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0px;
+
+  text-decoration: none solid rgb(33, 33, 33);
+  text-rendering: optimizelegibility;
+
+  perspective-origin: 718px 128px;
+  transform-origin: 718px 128px;
+  background: rgb(194, 24, 91) none repeat scroll 0% 0% / auto padding-box border-box;
+  border: 0px none rgb(33, 33, 33);
+  font: normal normal normal normal 16px/16px RobotoDraft, Roboto, sans-serif;
+  outline: rgb(33, 33, 33) none 0px;
+  padding:0;
+
+  z-index: 50;
+
+
+
+  h1,h2,h3{
+    line-height: 60px;
+    padding: 0;
+    margin: 0;
+    color: #fff; 
+    font-weight: 600;
+  }
+
+
+    // Colors 
+    @each $name, $variable in $colors {
+      &[class*="-#{($name)}"]{
+        background: #{($variable)};
+
+        .navigation-inner .sub-navigation{
+          background: lighten($variable, 15%)
+        }
+
+        @if $name == 'yellow' 
+        or $name == 'amber'
+        or $name == 'lime'
+        or $name == 'grey'{ 
+          background: #{($variable)}; 
+
+
+          h1,h2,h3,a:not([class*="master"]){
+            color: #000 !important;
+          }
+        }
+      }
+    }
+
+    .navigation-inner{
+      float: left;
+      width: 100%;
+
+      .navigation-content{
+        float: left;
+      }
+
+      a{
+        height: 60px;  
+        min-width: 72px;
+        display: block;
+        left: 0;
+        float: left;
+        line-height: 60px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff; 
+        margin: 0;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        padding: 0 .45em;
+
+        &[class*="-master"]{
+          @include square( $btn-size !important);
+          min-width: $btn-size !important;
+          top: 30px;
+          position: relative;
+        }
+      }
+
+      ul{
+        display: block; 
+        float: left; 
+        width: auto;
+        padding: 0; 
+        margin: 0;
+        list-style: none;
+
+        li{
+          display: inline-block;
+          margin: 0 -2.25px;
+          color: transparent;
+        }
+      }
+
+      .sub-navigation{
+        width: 100%;
+        min-height: 44px;
+        padding: 0 0;
+        text-align: center;
+        float: left; 
+        background: lighten(black, 15%);
+
+        ul{
+          padding: 0 16px;
+          margin: 0;
+          li{
+            color: #fff;
+            display:  -webkit-flex;
+            min-width: 110px;
+            text-align: center;
+            float: left;
+
+            a{
+              width: 100%;
+              height: 100%;
+              float: left;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    
+
+
+
+    &[class*="-left"]{
+      .navigation-content{
+        float: left;
+        margin: 0;
+      }
+      .navigation-side{
+        float: right;
+        padding-right: 32px;
+      }
+
+      a{
+        &[class*="-master"]{
+          left: calc(100% - 90px);
+        }
+      }
+    }
+    &[class*="-right"]{
+      .navigation-content{
+        float: right;
+        margin: 0;
+      }
+      .navigation-side{
+        float: left;
+        padding-left: 32px;
+      }
+
+      a{
+        &[class*="-master"]{
+          left: 30px;          
+        }
+      }
+    }
+
+
+
+
+    &+ [class*="material-sidebar"]{
+      top: 060px !important;
+    }
+
+    &+ [class*="material-sidebar"][data-state*="closed"]{
+      &[class*="sub-nav"]{
+        .sub-navigation{
+          width: 100% !important;
+        }
+      }
+    }
+
+
+       // Subnavigation 
+       &[class*="sub-nav"]{
+        .sub-navigation{
+          overflow: hidden;
+        }
+        float: left;
+        margin: 0;
+        margin-bottom: 4em;
+
+        .navigation-side{
+          height: 0;
+        }
+
+
+        &~ .material-container-layout{top: 4.5em}
+      }
+    }
+
+
+
+
+
+

@@ -1,0 +1,139 @@
+<div class="panel" data-component="lists">
+                <div>
+                  <div class="lists material-layout part">
+                    <header class="titles">
+                      <h3>Lists <a href="javascript:void(0)" class="material-btn-blue" data-action="close-toggle">open </a></h3>
+                    </header>
+
+
+                  </div>
+                </div>
+              </div>
+              <span class="divider"></span>
+              <div class="material-animations material-layout part"> 
+
+                <header class="titles">
+                  <h3>Effects & Animations <a href="javascript:void(0)" class="material-btn-blue" data-action="close-toggle">Open </a></32>
+
+                  </header>
+
+                  <section class="toggle">
+
+                   <header>
+                    <a href="javascript:void(0)" id="reload" class="material-btn-blue btn-ico-right">Reload <span class="m-icon ic_autorenew  right white"></span></a>
+                  </header>
+
+                  <div class="bit-2">
+                    <ul class="material-list-seam hierarchical-timing">
+                      <li>Item</li>
+                      <li>Item</li>
+                      <li>Item</li>
+                      <li>Item</li>
+                      <li>Item</li>
+                      <li>Item</li>
+                    </ul>
+                  </div>
+                  <div class="bit-2">
+                    <ul class="material-list-step hierarchical-timing">
+                      <li>Item</li>
+                      <li>Item</li>
+                      <li>Item</li>
+                      <li>Item</li>
+                      <li>Item</li>
+                      <li>Item</li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+              <span class="divider"></span>
+              <div class="icons part">
+                <header class="titles">
+                  <h3>Icons <a href="javascript:void(0)" class="material-btn-blue" data-action="close-toggle">Open </a></h3> 
+                </header>
+                <section class="toggle">
+                  <a href="http://codepen.io/LukyVj/pen/PwPwYR" target="_blank">Open the icons on an other page</a>
+                </section>
+              </div>
+              <span class="divider"></span>
+              <div class="icons part">
+                <header class="titles">
+                  <h3>Inputs <a href="javascript:void(0)" class="material-btn-blue" data-action="close-toggle">open</a></h3> 
+                </header>
+                <section class="toggle">
+
+                  <input type="text" placeholder="name" class="m-input-blue" />
+                  <input type="text" placeholder="name" class="m-input-red" />
+                  <input type="text" placeholder="name" class="m-input-green" />
+                </section> 
+              </div>
+              <span class="divider"></span>
+              <div class="dropd part">
+                <header class="titles">
+                  <h3>Dropdown <a href="javascript:void(0)" class="material-btn-blue" data-action="close-toggle">open</a></h3> 
+                </header>
+                <section class="toggle">
+
+                  <div class="dropdown">
+                    <span class="dropdown-title">Open the list</span>
+
+                    <ul class="dp-wide">
+                      <li><a href="#" class="btn-flat">Item</a></li>
+                      <li><a href="#" class="btn-flat">Item</a></li> 
+                      <li><a href="#" class="btn-flat">Item</a></li>
+                      <li><a href="#" class="btn-flat">Item</a></li>
+                      <li><a href="#" class="btn-flat">Item</a></li>
+                      <li><a href="#" class="btn-flat">Item</a></li>
+                    </ul> 
+                  </div>
+
+                  <div class="dropdown">
+                    <span class="dropdown-title">Open the list</span>
+
+                    <ul class="dp-regular">
+                      <li><a href="#" class="btn-flat">Item</a></li>
+                      <li><a href="#" class="btn-flat">Item</a></li> 
+                      <li><a href="#" class="btn-flat">Item</a></li>
+                      <li><a href="#" class="btn-flat">Item</a></li>
+                      <li><a href="#" class="btn-flat">Item</a></li>
+                      <li><a href="#" class="btn-flat">Item</a></li>
+                    </ul> 
+                  </div>
+
+                  <div class="dropdown">
+                    <span class="dropdown-title">Open the list</span>
+
+                    <ul class="dp-small">
+                      <li><a href="#" class="btn-flat">Item</a></li>
+                      <li><a href="#" class="btn-flat">Item</a></li> 
+                      <li><a href="#" class="btn-flat">Item</a></li>
+                      <li><a href="#" class="btn-flat">Item</a></li>
+                      <li><a href="#" class="btn-flat">Item</a></li>
+                      <li><a href="#" class="btn-flat">Item</a></li>
+                    </ul> 
+                  </div>
+
+
+
+                </section> 
+              </div>
+
+
+
+              <span class="divider"></span>
+              <div class="tooltip part">
+                <header class="titles">
+                  <h3>Tooltips <a href="javascript:void(0)" class="material-btn-blue" data-action="close-toggle">open</a></h3> 
+                </header>
+                <section class="toggle">
+
+                 <p class="text-flow">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea atque iure veritatis maiores. Possimus at laudantium ab  <span class="m-tooltip-left" data-tooltip-content="Hello">LEFT</span> 
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis eveniet, vitae molestias <span class="m-tooltip-bottom" data-tooltip-content="Hi my name is Lucas">BOTTOM</span> tempore in magnam officiis assumenda natus, ipsum, alias reprehenderit deserunt? Esse debitis nostrum tenetur porro, aliquam amet!
+                  <span class="m-tooltip-top" data-tooltip-content="I'm currently creating some tooltips">TOP</span> deserunt perferendis animi sapiente! Eveniet necessitatibus earum fuga voluptatibus  <span class="m-tooltip-right" data-tooltip-content="With short and long descriptions, to fit to your wishes">RIGHT</span> accusamus quo et dolore.</p> 
+
+
+
+                </section> 
+              </div>
+            </div>
+          </div>  
+        </div>

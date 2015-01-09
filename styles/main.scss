@@ -1,0 +1,132 @@
+@import 'framaterial.scss';
+
+// Demo only 
+// Unrelated to material
+// It's just the page presentation
+header{
+  &.titles{
+    background: #fff;
+    float: left; 
+    width: 100%;
+    margin: 0;
+    padding: 0 0 0 1em ;
+    height: 80px;
+
+    h2, h3{
+      padding: 0; 
+      margin: 0; 
+      line-height: 80px;
+      text-transform: uppercase;
+    }
+
+    [class*="material-btn"]{
+      padding: 0 12px;
+      font-size: 16px;
+      height: 44px;
+      line-height: 44px;
+      float: right;
+      margin: 1em;
+
+      span{
+        left: 60px;
+        position: absolute;
+      }
+    }
+  }
+
+  &.documentation{
+    padding: 1em 0 1.5em;
+    width: 100%;
+    float: left;
+  }
+}
+section.toggle{
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+
+  &.open{
+    height: auto;
+    overflow: visible;
+  }
+}
+
+.part{
+  float: left; 
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.footer{
+  width: 100%; 
+  float: left; 
+  color: #ccc; 
+  text-align: center;
+
+  p.flow-text{
+    font-size: 14px; 
+  }
+}
+[class*="m-tooltip"] >[class*="master"] ~ .tooltip_content{
+  left: -60px !important;
+}
+[class*="m-tooltip"]:hover{
+  >[class*="master"] ~ .tooltip_content{
+    transform: translateX(-50%) translateY(100px) !important;
+  }
+}
+
+// // Components
+// [data-component]{
+//   display: none;
+
+
+//   &[data-component*="welcome"]{
+//     display: block;
+//   }
+
+//   &.on-screen{
+//     display: block;
+
+//     &[data-component*="welcome"]{
+//       display: none !important;
+//     }
+//   }
+
+// }
+
+
+// Grid on project page
+/* For the grid example */
+.box {
+  text-align:  center;
+  font:  1em "Helvetica Neue", Helvetica, Arial;
+  font-weight: 800;
+
+  
+
+  color: #fff;
+  padding:  16px;
+  margin:  0em;
+
+  code{
+    clear: both;
+    display: block;
+    text-align: center;
+  }
+}
+
+@each $name, $variable in $colors{
+    body[data-material-theme*="#{$name}"]{
+      .box{background: $variable;}
+    }
+}
+
+.box:hover {
+  color:#fff;
+}
+
+[class*="bit-"]{
+  padding: 6px;
+}

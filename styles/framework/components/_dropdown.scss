@@ -1,0 +1,104 @@
+$dropdown-max-width: 320px;
+$dropdown-regular-width: $dropdown-max-width/1.88;
+$dropdown-small-width: $dropdown-max-width/3.26;
+
+[class*="dropdown"]{
+  display: inline-block;
+  float: left;
+  position: relative;
+  z-index: 99999999;
+  .dropdown-title{
+    display: inline-block; 
+    padding: .5em .8em;
+    cursor: pointer;
+
+
+    &:hover{
+      background: rgba(black, .2)
+    }
+
+    &:after{
+      font-family: "Material-Design-Icons";
+      content: "\e894";
+      text-align: right;
+    }
+  }
+
+  ul{
+    padding: 0;
+    list-style: none;
+    border-radius: 2px;
+    height: 0;
+    overflow: hidden; 
+    transition: all .02s ease, opacity .1s ease .1s, top .1s ease .1s;  
+
+      // If there is many different dropdown, give them depth
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      ul{
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        ul{
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+          ul{
+            box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+          }
+        }
+      }
+
+      li{
+
+        a{
+          position: relative;
+          cursor: pointer;
+          user-select: none;
+          display: block;
+          height: 48px;
+          line-height: 48px;
+          padding: 0 22px; 
+          text-decoration: none;
+          clear: both;
+          font-weight: 500;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          text-align: left;
+          white-space: nowrap;
+          transition: all 0.2s ease-in-out;   
+          color: #000;
+
+          &:hover{
+            background: rgba(black, .1)
+          }
+        }     
+      }
+
+      &[class*="dp-wide"]{
+        max-width: $dropdown-max-width;
+        width: 100%;
+        background: #fff;
+      }
+      
+      &[class*="dp-regular"]{
+        max-width: $dropdown-regular-width;
+        width: 100%;
+        background: #fff;
+      }
+      &[class*="dp-small"]{
+        max-width: $dropdown-small-width;
+        width: 100%;
+        background: #fff;
+      }
+
+      position: absolute;
+      transform: scale(0) translateY(-5em);
+      height: 0;
+      margin-top: 2.40em;
+
+
+      &.open{
+        transform: scale(1) translateY(0em);
+        height: auto;
+
+        transition: all 0s ease, opacity .3s ease .2s, top .3s ease .2s; 
+
+      } 
+    }
+  }

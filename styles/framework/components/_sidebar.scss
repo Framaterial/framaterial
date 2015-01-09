@@ -1,0 +1,208 @@
+
+
+$sidebar-width: 240px;
+
+[class*="sidebar-"]{
+  width: $sidebar-width;
+  @media all and (max-width: 768px){
+    width: 90%;
+  }
+
+  height: 100%;
+  position: fixed;
+  z-index: 20;  
+  top: 0;
+  overflow: hidden;
+  transition: left .3s ease, right .3s ease, box-shadow .3s ease, width .3s ease;
+
+    // structure 
+    header{
+      height: 160px;
+      width: 100%;
+      float: left;
+      overflow: hidden;
+      margin-bottom: 10px;
+
+
+      img{
+        width: 100%;
+        float: left; 
+        top: 0;
+      }
+    }
+
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li{
+        padding:0;
+        margin:0;
+        float: left;
+        width: 100%;
+
+        a{
+          position: relative;
+          cursor: pointer;
+          user-select: none;
+          display: block;
+          height: 48px;
+          line-height: 48px;
+          padding: 0 22px; 
+          text-decoration: none;
+          clear: both;
+          font-weight: 500;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          text-align: left;
+          white-space: nowrap;
+          transition: all 0.2s ease-in;           
+
+          &:hover{
+            background: rgba(black, .2)
+          }
+
+          &[class*="btn-flat"]{
+            width: 100% !important;
+            display: block;
+          }
+        }
+      }
+    }
+
+    // Styles
+
+
+    // In or out || Right or left
+    &[class*="-left"]{
+      float: left;
+      left: 0;
+
+      &[class*="in-"]{
+        box-shadow: inset -2em 0 1em -2em rgba(black, .4);
+      }
+      &[class*="out-"]{
+        box-shadow:  .5em 0 1em  rgba(black, .4);
+      }
+
+      &[data-state*="closed"]{
+        left: -$sidebar-width;
+        @media all and (max-width: 768px){
+         left: -90%;
+       }
+       box-shadow: 0 0 0;
+     }
+   }
+
+   &[class*="-right"]{
+    float: right;
+    right: 0;
+
+    &[class*="in-"]{
+      box-shadow: inset 2em 0 1em -2em rgba(black, .4);
+    }
+    &[class*="out-"]{
+      box-shadow:  -.5em 0 1em  rgba(black, .4);
+    }
+
+    &[data-state*="closed"]{
+      right: -$sidebar-width;
+      @media all and (max-width: 768px){
+        right: -90%;
+      }
+      box-shadow: 0 0 0;
+    }
+  }
+
+   // Master
+   &[class*="-master"]{
+    position: fixed !important; 
+    top: 0 !important;
+    z-index: 20000000000;
+  }
+
+    // Colors 
+
+    @each $name, $variable in $colors {
+      &[class*="-#{($name)}"]{
+        background: #{($variable)};
+        color: #fff;
+
+        a{
+          color: #fff;
+        }
+
+        [class*="btn"]{
+          margin: 0;
+
+          &[class*="flat"]{
+            &[class*="white"]{
+              color: #fff !important;
+            }
+          }
+        }
+
+        @if $name == 'yellow' 
+        or $name == 'amber'
+        or $name == 'lime'
+        or $name == 'grey'
+        or $name == 'white'{ 
+          color: #000 !important;
+          background: #{($variable)};  
+
+          a{
+            color: #000 !important;
+          }
+
+          [class*="btn"]{ 
+            color: #000 !important;
+          } 
+        }
+      }
+    }
+
+
+
+    // Sidebar components
+    [class*="dropdown"]{
+
+      width: 100%;    
+      margin-top: 62px; 
+
+      .dropdown-title{  
+        width: 100%;
+        padding-left: 20px;
+      }
+
+      ul{ 
+
+        &[class*="dp-wide"],
+        &[class*="dp-regular"],
+        &[class*="dp-small"]{
+          max-width: 100% !important;   
+        } 
+
+        z-index: 32;  
+        position: absolute;
+        transform: scale(0) translateY(0);
+        margin-top: 6.1em !important; 
+        border-radius: 0 !important;
+
+        li{
+          background: #e0e0e0;
+
+
+          a{
+            color: #000 !important;
+          }
+        }
+      }
+
+    }
+
+
+  }
+
+
+  

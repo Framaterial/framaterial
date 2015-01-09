@@ -1,0 +1,56 @@
+progress[class*="m-progress"]{
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+
+  height: 6px;
+  position: relative;
+  background-color: #fff;
+
+  animation: progressGrow .8s ease;
+  transform: scaleY(1);
+  overflow: hidden;
+  
+  &::-webkit-progress-bar {
+      background-color: #c8c8c8;
+      position: absolute;
+      left: 0;
+  }
+  &::-webkit-progress-value {
+      background-color: currentColor;
+  }
+
+  &[data-type*="animated"]{
+
+    &::-webkit-progress-value {
+      background-color: currentColor;
+      width: 0 ;
+    }
+
+    &.loaded{
+
+    &::-webkit-progress-value {
+      background-color: currentColor;
+      width: auto;
+    }
+    }
+  }
+
+  &[data-type*="indeterminate"]{
+
+    &::-webkit-progress-value {
+      background-color: currentColor;
+      transform: scaleX(90%);
+    }
+
+    &.loaded{
+
+    &::-webkit-progress-value {
+      background-color: currentColor;
+      width: auto;
+    }
+    }
+  }
+}
+
+

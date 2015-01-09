@@ -1,0 +1,51 @@
+[class*="m-spinner"]{
+  float: left;
+  transform: scale(.8);
+
+
+  $offset: 187;
+  $duration: 1.4s;
+
+  .spinner {
+    animation: rotator $duration linear infinite;
+  }
+
+  
+
+  .path {
+    stroke-dasharray: $offset;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    animation: dash $duration linear infinite;
+    stroke: #B3B3B3;
+  }
+
+  &[data-type*="indeterminate"]{
+    .spinner {
+      animation: rotator $duration*1.35 ease-in-out infinite;
+    }
+
+    .path {
+      animation: dash $duration*1.35 ease-in-out infinite;
+    }
+  }
+
+
+
+@keyframes rotator {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(270deg); }
+}
+
+@keyframes dash {
+ 0% { stroke-dashoffset: $offset; }
+ 50% {
+   stroke-dashoffset: $offset/4;
+   transform:rotate(135deg);
+ }
+ 100% {
+   stroke-dashoffset: $offset;
+   transform:rotate(450deg);
+ }
+}
+}

@@ -1,0 +1,106 @@
+input{
+ &[type*="radio"]{
+  appearance: none !important;
+  -webkit-appearance: none !important;    
+}
+&[type*="radio"]{    
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  border: 0 !important;
+  padding: .35em !important;
+  margin: .5em;
+  background: currentColor;
+  cursor: pointer;
+  position: absolute;
+  left: -9999px;
+
+
+  &~ label[for*="rd"]{
+   display: block;
+   font-size: .8em;
+   position: relative;
+   padding-left: 40px !important;
+
+   &:before, &:after{
+    content:'';
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    transition: background .1s ease, transform .2s ease .1s;
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+
+  }
+  &:before{
+    border: 3px solid #5a5a5a;
+    transform: scale(1);
+    transition: all .2s ease;
+  }
+  &:after{
+    background: currentColor;
+    transform: scale(0);
+    margin: 2px;
+
+  }
+
+  .ripple{
+    width: 45px;
+    height: 45px;
+    background: currentColor;
+    display: block;
+    position: absolute;
+    top: -11px;
+    left: -11px; 
+    border-radius: 100%;
+    opacity: .25;
+    transform: scale(0);
+    transition: transform .2s ease;
+
+  }
+}
+&:checked{
+  &~ label[for*="rd"]{
+    &:before{
+      border-color: currentColor;
+    }
+    &:after{
+      background: currentColor;
+      transform: scale(1.1);
+      margin: 3px;
+    }
+  }
+}
+}
+
+&:active{
+  &~ label[for*="rd"]{
+    .ripple{
+      transform: scale(.9);
+    }
+  }
+
+  &:checked{
+    &~ label{
+      .ripple{
+        transform: scale(1) !important;
+        background: rgba(black, .5) !important;
+      }
+    }
+  }
+}
+&[disabled]:active{
+  &~ label{
+    .ripple{
+      transform: scale(0)
+    }
+  }
+}
+
+&:disabled{
+  opacity: .6;
+}
+
+}

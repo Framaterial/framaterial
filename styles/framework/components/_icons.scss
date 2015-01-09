@@ -1,0 +1,47 @@
+// Icons
+
+[class*="-icon"]{
+  overflow: hidden;
+  display: inline-block;
+  font-size: 100%;
+    // Do not work for IE
+    &[class*="white"]{
+      -webkit-filter: invert(100%);
+      -moz-filter: invert(100%);
+      -o-filter: invert(100%);
+      filter: invert(100%);
+    }
+  }
+
+  p [class*="-icon"]{
+    line-height: .8;
+  }
+
+  [class*="-btn"] [class*="-icon"]{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);  
+   font-size: 200%;
+ }
+
+  // Icons in buttons
+  a:not([class*="float"]) span.m-icon{
+    position: relative;
+    top: inherit;
+    left: inherit;
+    transform: inherit;
+    font-size: 130%;
+    margin-top: -3px;
+
+    &[class*="right"]{
+     float: right;
+     margin-right: 0;
+     margin-left: 15px;
+   }
+   &[class*="left"]{
+     float: left;
+     margin-left: 0;
+     margin-right: 15px;
+   }
+ }

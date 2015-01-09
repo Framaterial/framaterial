@@ -1,0 +1,151 @@
+// Inputs
+
+[class*="material-input-group"]{
+  display: block;
+  float: left;
+  min-height: 48px;
+  width: 100%;
+  font-size: 22px;
+  position: relative;
+
+  &[class*="group-text"]{
+    max-width: 300px;
+    padding: 0 4px;
+  }
+
+
+  output{
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -40px;
+    margin: auto;
+    width: 30px;
+
+  }
+
+  input {
+   &[class*="m-input"]{
+    background: transparent;
+    padding-left: 0;
+  }
+
+  @each $type in $types { 
+    &[type*="#{($type)}"]{ 
+      appearance: none; 
+      border: 0;
+      border-bottom-width: 1px;  
+      border-bottom-style: solid;  
+      display: inline-block;
+
+      margin: 0 0 15px 0;
+      outline: none;
+      position: relative;
+      transition: border .2s ease-out;
+
+
+        // Input colors
+        @each $name, $variable in $colors {
+          &[class*="-#{($name)}"]{
+            border-bottom-color:$variable;
+            
+
+            &~ .highlight,
+            &:focus ~ label{
+              color: $variable;
+            }
+
+          }
+        }
+
+
+        &:focus{ 
+        }        
+      }
+    }
+
+
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width: 100%;
+    border:none;
+    border-bottom:1px solid currentColor;
+
+    &[type*="text"]:focus{ 
+      outline:none;
+
+      ~ label{
+        top:-20px;
+        font-size:12px;
+
+        color: currentColor;
+      }
+
+      ~ .bar:before, 
+      ~ .bar:after {
+        width:50%;
+      }
+
+      ~ .highlight {         
+        animation:inputHighlighter 0.3s ease;
+      }
+    } 
+  }
+
+
+  label.text-input-label {
+    color:#999; 
+    font-size:18px !important;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+  }
+  
+
+
+  .bar{
+    position:relative; 
+    display:block; 
+    width:100%; 
+    top: -14px;
+
+
+    &:before, &:after   {
+      content:'';
+      height:2px; 
+      width:0;
+      bottom:1px; 
+      position:absolute;
+      transition:0.2s ease all;
+       // Input colors
+       @each $name, $variable in $colors {
+        &[class*="-#{($name)}"]{
+          color: $variable;
+          background: $variable;
+        }
+      }
+    }
+    &:before {
+      left:50%;
+    }
+    &:after {
+      right:50%; 
+    }
+  }
+
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width:100%; 
+    top:5%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+}
+

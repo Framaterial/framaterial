@@ -1,0 +1,96 @@
+<!doctype html>
+<html class="no-js">
+<head style="padding-bottom:30px">
+  <meta charset="utf-8">
+  <title>MaterialFramework - RGB App </title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+
+  <link rel="stylesheet" href="../../styles/main.min.css">  
+  <script src="../../bower_components/modernizr/modernizr.js"></script>
+</head>
+<body >
+  <div class="material-design-layout" style="float:left;padding-bottom:20px;">
+
+
+    <div class="bit-1">
+      <div class="bit-3 center-force">
+        <div class="m-card " data-depth="3">
+          <header data-background>
+
+          </header>
+
+          <section class="inner__card">
+            <span class="space-y"></span>
+
+            <input type="range" class="m-input-red" max="255" data-output="true">
+            <input type="range" class="m-input-green" max="255" data-output-expand="true">
+            <input type="range" class="m-input-blue" max="255" data-output="true">
+
+          </section>
+
+          <footer>
+            <code class="panel result-rgb t-center center-force" data-depth="1"></code>
+          </footer>
+          <div class="space-y"></div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <script src="../../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../../scripts/framaterial.js"></script>
+    <script src="../../scripts/main.js"></script>
+    <script src="../../scripts/plugins/pickMeUp.js"></script>
+
+    <script>
+      $(document).ready(function(){
+
+        function colorize($target){
+          var card = $($target),
+          color_panel = card.find('header'),
+          range = $('input[type*="range"]'),
+          range_red = $('input[type*="range"][class*="-red"]'),
+          range_blue = $('input[type*="range"][class*="-blue"]'),
+          range_green = $('input[type*="range"][class*="-green"]'),
+          r_color = $('input[type*="range"][class*="-red"]').attr('value'),
+          g_color = $('input[type*="range"][class*="-green"]').attr('value'),
+          b_color = $('input[type*="range"][class*="-blue"]').attr('value');
+          color_panel.css('background', 'rgb('+Math.floor(r_color)+','+Math.floor(g_color)+','+Math.floor(b_color)+')');
+          var rgbVal = 'rgb('+Math.floor(r_color)+','+Math.floor(g_color)+','+Math.floor(b_color)+')';               
+          range.on('change', function(){
+            var $this = $(this),
+            vMax = $this.attr('max'),
+            mVal = 100/vMax,
+            r_color = $('input[type*="range"][class*="-red"]').attr('value'),
+            g_color = $('input[type*="range"][class*="-green"]').attr('value'),
+            b_color = $('input[type*="range"][class*="-blue"]').attr('value');
+            color_panel.css('background', 'rgb('+Math.floor(r_color)+','+Math.floor(g_color)+','+Math.floor(b_color)+')');
+            var rgbVal = 'rgb('+Math.floor(r_color)+','+Math.floor(g_color)+','+Math.floor(b_color)+')'; 
+            var hex = rgb2hex( rgbVal );
+            $('.result-hex').html( hex );
+            $('.result-rgb').html('rgb('+Math.floor(r_color)+','+Math.floor(g_color)+','+Math.floor(b_color)+')');             
+        });
+        //Function to convert hex format to a rgb color
+        function rgb2hex(rgb){
+         rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
+           return (rgb && rgb.length === 4) ? "#" +
+           ("0" + parseInt(rgb[1],10).toString(16)).slice(-2) +
+           ("0" + parseInt(rgb[2],10).toString(16)).slice(-2) +
+           ("0" + parseInt(rgb[3],10).toString(16)).slice(-2) : '';
+         }
+         var hex = rgb2hex( rgbVal );
+         $('.result-hex').html( hex );
+         $('.result-rgb').html('rgb('+Math.floor(r_color)+','+Math.floor(g_color)+','+Math.floor(b_color)+')' );
+       }
+       colorize('.m-card')
+     })
+</script>
+
+</body>
+</html>
