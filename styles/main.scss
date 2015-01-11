@@ -130,3 +130,10 @@ section.toggle{
 [class*="bit-"]{
   padding: 6px;
 }
+
+.brand-logo{
+  background: #FFF url(../images/framaterial_logo.svg)no-repeat center center;
+  background-size: 50%;
+  color: transparent !important;
+  text-indent: -9999px !important;
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="528px" height="301px" viewBox="0 0 528 301" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>framaterial_logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="framaterial" sketch:type="MSLayerGroup" transform="translate(4.000000, 2.000000)">
+            <g id="Letters" transform="translate(0.362875, 0.000000)" sketch:type="MSShapeGroup">
+                <g id="F" transform="translate(0.000000, 0.725248)">
+                    <rect id="Rectangle-29" fill="#29B6F6" x="0" y="126.918317" width="138.618283" height="54.7561881"></rect>
+                    <rect id="Rectangle-28" fill="#4FC3F7" x="0" y="126.918317" width="89.2672715" height="54.7561881"></rect>
+                    <rect id="Rectangle-17" fill="#03A9F4" x="0" y="0" width="53.7055129" height="292.274752"></rect>
+                    <rect id="Rectangle-18" fill="#03A9F4" x="0" y="0" width="178.534543" height="53.6683168"></rect>
+                    <rect id="Rectangle-26" fill="#29B6F6" x="0" y="0" width="138.618283" height="53.6683168"></rect>
+                    <rect id="Rectangle-27" fill="#4FC3F7" x="0" y="0" width="89.2672715" height="53.6683168"></rect>
+                    <rect id="Rectangle-21" fill="#29B6F6" x="0" y="0" width="53.7055129" height="237.155941"></rect>
+                    <rect id="Rectangle-22" fill="#4FC3F7" x="0" y="0" width="53.7055129" height="181.674505"></rect>
+                    <rect id="Rectangle-23" fill="#81D4FA" x="0" y="0" width="53.7055129" height="126.918317"></rect>
+                    <rect id="Rectangle-24" fill="#B3E5FC" x="0" y="0" width="53.7055129" height="78.6893564"></rect>
+                    <rect id="Rectangle-25" fill="#E1F5FE" x="0" y="0" width="53.7055129" height="39.8886139"></rect>
+                </g>
+                <g id="M" transform="translate(231.877181, 0.000000)">
+                    <path d="M53.0818901,0.0470090732 L182.660565,129.535938 L144.685032,167.485169 L15.1063578,37.9962398 L53.0818901,0.0470090732 L53.0818901,0.0470090732 Z" id="Rectangle-19" fill="#03A9F4"></path>
+                    <path d="M106.444596,129.642148 L235.510088,0.666046557 L273.48562,38.6152773 L144.420128,167.591379 L106.444596,129.642148 L106.444596,129.642148 Z" id="Rectangle-20" fill="#03A9F4"></path>
+                    <rect id="Rectangle-35" fill="#03A9F4" x="0.362875087" y="0.362623762" width="53.7055129" height="292.274752"></rect>
+                    <rect id="Rectangle-30" fill="#29B6F6" x="0.181437544" y="0.362623762" width="53.7055129" height="237.155941"></rect>
+                    <rect id="Rectangle-31" fill="#4FC3F7" x="0.181437544" y="0.362623762" width="53.7055129" height="181.674505"></rect>
+                    <rect id="Rectangle-32" fill="#81D4FA" x="0.181437544" y="0.362623762" width="53.7055129" height="126.918317"></rect>
+                    <rect id="Rectangle-33" fill="#B3E5FC" x="0.181437544" y="0.362623762" width="53.7055129" height="78.6893564"></rect>
+                    <rect id="Rectangle-34" fill="#E1F5FE" x="0.181437544" y="0.362623762" width="53.7055129" height="39.8886139"></rect>
+                    <rect id="Rectangle-41" fill="#03A9F4" x="234.054431" y="0.725247525" width="53.7055129" height="292.274752"></rect>
+                    <rect id="Rectangle-36" fill="#29B6F6" x="234.054431" y="0.725247525" width="53.7055129" height="237.155941"></rect>
+                    <rect id="Rectangle-37" fill="#4FC3F7" x="234.054431" y="0.725247525" width="53.7055129" height="181.674505"></rect>
+                    <rect id="Rectangle-38" fill="#81D4FA" x="234.054431" y="0.725247525" width="53.7055129" height="126.918317"></rect>
+                    <rect id="Rectangle-39" fill="#B3E5FC" x="234.054431" y="0.725247525" width="53.7055129" height="78.6893564"></rect>
+                    <rect id="Rectangle-40" fill="#E1F5FE" x="234.054431" y="0.725247525" width="53.7055129" height="39.8886139"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
