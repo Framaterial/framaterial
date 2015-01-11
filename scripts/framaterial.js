@@ -59,7 +59,7 @@ function hierarchy(){
 // Ripple effect 
 $(function(){
   var ink, d, x, y;
-  $("a,li").click(function(e){
+  $("a[class*='btn']").click(function(e){
     if($(this).find(".ink").length === 0){
       $(this).prepend("<div class='ink'></div>");
     }
