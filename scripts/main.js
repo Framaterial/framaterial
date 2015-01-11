@@ -137,7 +137,7 @@ if(window.location.href.indexOf("examples") > -1) {
 }
 
 function appendAboutModal(){
-  var modalStr = '<div class="m-card bit-2 off-screen" data-type="modal" data-background-text="about" data-background-color="#03a9f4" data-curtain="true" data-depth="4" id="about"><header data-background></header><section class="inner__card"><h2 class="title">Framaterial V1.0 (RC.1.2)</h2><p>Framaterial - A Framework to create Material Design projects </p><ul><li>Creation : <code>Decemember 3 2014</code></li><li>Author : <code>@LukyVj</code></li><li>Contributions : <code>@Dervonderbengen</code></li><li>On Github : <code>https://github.com/LukyVj/Framaterial-design</code></li></ul></section><footer><a href="#" data-btn-type="toggle" class="material-btn-flat-black">Cancel</a><a href="#" class="material-btn-flat-lightblue">Ok</a></footer></div>';
+  var modalStr = '<div class="m-card bit-2 off-screen" data-type="main-modal" data-background-text="about" data-background-color="#03a9f4" data-curtain="true" data-depth="4" id="about"><header data-background></header><section class="inner__card"><h2 class="title">Framaterial V0.1 (RC.1.3)</h2><p>Framaterial - A Framework to create Material Design projects </p><ul><li>Creation : <code>Decemember 3 2014</code></li><li>Author : <code>@LukyVj</code></li><li>Contributions : <code>@Dervonderbengen</code></li><li>On Github : <code>ramaterial.github.io/framaterial</code></li></ul></section><footer><a href="#" data-btn-type="toggle" class="material-btn-flat-black">Cancel</a><a href="#" class="material-btn-flat-lightblue">Ok</a></footer></div>';
   $('.material-design-layout').append(modalStr);
 }
 toggleComponents()

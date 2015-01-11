@@ -5292,16 +5292,17 @@ a {
         position: relative; }
     [class*="material-"] [class*="-card"][data-type*="modal"] {
       transition: -webkit-transform 0.3s ease, margin 0.3s ease, opacity 0.4s ease;
-      transition: transform 0.3s ease, margin 0.3s ease, opacity 0.4s ease;
-      position: absolute;
-      top: 10em;
-      left: 0;
-      right: 0;
-      margin: auto;
-      z-index: 9999; }
+      transition: transform 0.3s ease, margin 0.3s ease, opacity 0.4s ease; }
+      [class*="material-"] [class*="-card"][data-type*="modal"][data-type*="main-modal"] {
+        position: absolute;
+        top: 10em;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 9999; }
       [class*="material-"] [class*="-card"][data-type*="modal"].off-screen {
-        -webkit-transform: scale(0) translate(0, 0);
-        transform: scale(0) translate(0, 0);
+        -webkit-transform: scale(1) translate(0, 0);
+        transform: scale(1) translate(0, 0);
         margin-top: -100px;
         opacity: 0; }
         [class*="material-"] [class*="-card"][data-type*="modal"].off-screen ~ .curtain {
