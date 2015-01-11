@@ -4438,13 +4438,15 @@ a {
     letter-spacing: .8px;
     border-radius: 2px;
     box-shadow: 0 0 1px #333;
-    color: #333; }
+    color: #333;
+    padding: 0 0 !important; }
     [class*="material-"][class*="-inline-list"] li a {
       color: #333;
       width: 100%;
       height: 100%;
       display: block;
-      float: left; }
+      float: left;
+      padding: .65em; }
     [class*="material-"][class*="-inline-list"] li:hover {
       background: rgba(51, 51, 51, 0.1); }
   [class*="material-"] blockquote {
@@ -5615,7 +5617,8 @@ a {
   [class*="material-"].hierarchical-timing > .animated {
     -webkit-transform: scale(1);
     transform: scale(1);
-    transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1); }
+    transition: -webkit-transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1); }
   [class*="material-"].hierarchical-timing .no-js [class*="material-"] > * {
     -webkit-transform: scale(1);
     transform: scale(1); }

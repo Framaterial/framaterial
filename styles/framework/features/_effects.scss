@@ -21,7 +21,7 @@
   }
   &.hierarchical-timing > .animated {
     transform: scale(1);
-    transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
   }
   &.hierarchical-timing .no-js & > * {
     transform: scale(1);
