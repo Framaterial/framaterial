@@ -2,112 +2,89 @@
 <html class="no-js">
 <head>
   <meta charset="utf-8">
-  <title>MaterialFramework</title>
+  <title>Framaterial V0.1</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-  <!-- build:css styles/vendor.css -->
-  <!-- bower:css -->
-  <!-- endbower -->
-  <!-- endbuild -->
-
-  <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.min.css">
-  <!-- endbuild -->
-
-  <!-- build:js scripts/vendor/modernizr.js -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
   <script src="bower_components/modernizr/modernizr.js"></script>
-  <!-- endbuild -->
 </head>
 <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-            <![endif]-->
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 
 
-            <div class="material-design-layout">
+<div class="material-design-layout">
 
-              <div class="material-navigation-left-lightblue-absolute">
-                <div class="navigation-inner"> 
-                  <div class="navigation-content">
-                    <a href="#" class="icon-menu" data-toggle="sidebar"><span class="m-icon md-navigation-menu"></span></a>
-                    <a href="#" class="brand-logo">Framaterial</a>
-                  </div>
-                  <ul class="navigation-side">
-                    <li><span class="m-tooltip-bottom" data-tooltip-content="Only 100Kb"><a href="#" class="material-btn-float-red-master" id="download" ><span class="m-icon md-file-file-download"></span></a></span></li>                  
-                  </ul>
-                </div>
-              </div> 
+  <div class="material-navigation-left-lightblue-absolute">
+    <div class="navigation-inner"> 
+      <div class="navigation-content">
+        <a href="#" class="icon-menu" data-toggle="sidebar"><span class="m-icon md-navigation-menu"></span></a>
+        <a href="#" class="brand-logo">Framaterial</a>
+      </div>
+      <ul class="navigation-side">
+        <li><span class="m-tooltip-bottom" data-tooltip-content="Only 100Kb"><a href="#" class="material-btn-float-red-master" id="download" ><span class="m-icon md-file-file-download"></span></a></span></li>                  
+      </ul>
+    </div>
+  </div> 
 
-              <nav class="material-sidebar-left-out-lightblue" data-state="open"> 
+  <nav class="material-sidebar-left-out-lightblue" data-state="open"> 
 
-                <header data-image-url="http://puu.sh/difqU/fe10904560.png">
+    <header data-image-url="http://puu.sh/difqU/fe10904560.png">
 
-                </header>
+    </header>
 
-                <ul>             
-                  <li><a href="get-started.html" class="material-btn-flat-white"> Get started</a></li>
-                  <li><a href="components.html" class="material-btn-flat-white"> Components</a></li>
-                  <li><a href="javascript.html" class="material-btn-flat-white"> Javascript</a></li>
-                  <li><a href="#about" data-btn-type="toggle" class="material-btn-flat-white"> About</a></li>
-                </ul>
-                <span class="divider"></span>
+    <ul>             
+      <li><a href="get-started.html" class="material-btn-flat-white"> Get started</a></li>
+      <li><a href="components.html" class="material-btn-flat-white"> Components</a></li>
+      <li><a href="javascript.html" class="material-btn-flat-white"> Javascript</a></li>
+      <li><a href="#about" data-btn-type="toggle" class="material-btn-flat-white"> About</a></li>
+    </ul>
+    <span class="divider"></span>
 
-                <ul> 
-                  <li><a href="examples.html" class="material-btn-flat-white"> <span class="m-icon md-image-collections left"></span> Examples</a></li>
-                  <li><a href="templates.html" class="material-btn-flat-white"> <span class="m-icon md-av-web left"></span> templates</a></li>
-                  <li><a href="http://github.com/LukyVj/Framaterial-design" class="material-btn-flat-white"> <span class="m-icon md-hardware-keyboard left"></span> source code</a></li>
-                  <li><a href="http://twitter.com/framaterial" class="material-btn-flat-white"> <span class="m-icon md-social-share left"></span> Follow</a></li>
-                </ul>
-              </nav>
+    <ul> 
+      <li><a href="examples.html" class="material-btn-flat-white"> <span class="m-icon md-image-collections left"></span> Examples</a></li>
+      <li><a href="templates.html" class="material-btn-flat-white"> <span class="m-icon md-av-web left"></span> templates</a></li>
+      <li><a href="http://github.com/LukyVj/Framaterial-design" class="material-btn-flat-white"> <span class="m-icon md-hardware-keyboard left"></span> source code</a></li>
+      <li><a href="http://twitter.com/framaterial" class="material-btn-flat-white"> <span class="m-icon md-social-share left"></span> Follow</a></li>
+    </ul>
+  </nav>
 
-              <div class="material-container">
+  <div class="material-container">
 
-                <div class="panel bit-1">
-                  <div class="panel-body">
-                    <h1>Framaterial Framework</h1>
+    <div class="panel bit-1">
+      <div class="panel-body">
+        <h1>Framaterial Framework</h1>
 
-                    <section>
-                      <p>Framaterial is an open-source framework that allows you to create
-                        projects with the <a href="#">material design</a> elements and rules</p>
-                        <p>It's composed of many components and javascript functions to make it easy to use
-                          directly out of the box</p>
-                          <p>With Framaterial, you'll be able to create single page apps & websites, to complex apps & websites, without the help of any thirs pary libraries, frameworks or plugins.</p>
-                          <span class="divider"></span>
-                          <p>It's have been thought to make its integration easy for everyone, with a logic and semantic structure</p>
-                          <span class="divider"></span>
-                          <p>In order to use it, download the <a href="#" class="material-btn-flat-lightblue">Framaterial.zip</a>, and expand it at the root of your project.</p>
-                        </section>
-                      </div>
+        <section>
+          <p>Framaterial is an open-source framework that allows you to create
+            projects with the <a href="#">material design</a> elements and rules</p>
+            <p>It's composed of many components and javascript functions to make it easy to use
+              directly out of the box</p>
+              <p>With Framaterial, you'll be able to create single page apps & websites, to complex apps & websites, without the help of any thirs pary libraries, frameworks or plugins.</p>
+              <span class="divider"></span>
+              <p>It's have been thought to make its integration easy for everyone, with a logic and semantic structure</p>
+              <span class="divider"></span>
+              <p>In order to use it, download the <a href="#" class="material-btn-flat-lightblue">Framaterial.zip</a>, and expand it at the root of your project.</p>
+            </section>
+          </div>
 
-                    </div>
+        </div>
 
-                    <div class="footer">
-                      <p>- Made with <span class="m-icon-red md-action-favorite-outline"></span> by a gitch -</p>
-                    </div>
-                  </div>
-                  
+        <div class="footer">
+          <p>- Made with <span class="m-icon-red md-action-favorite-outline"></span> by a gitch -</p>
+        </div>
+      </div>
+    </div>
 
-                  
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/framaterial.js"></script>
+    <script src="scripts/main.js"></script> 
 
-
-                </div>
-
-                <script>
-
-                </script>
-
-                
-
-
-                <!-- build:js scripts/vendor.js -->
-                <!-- bower:js -->
-                <script src="scripts/jquery.min.js"></script>
-                <script src="scripts/framaterial.js"></script>
-                <script src="scripts/main.js"></script> 
-                <!-- build:js scripts/main.js -->
-                <!-- endbuild -->
-              </body>
-              </html>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+  </body>
+  </html>
