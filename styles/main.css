@@ -4240,6 +4240,8 @@ a {
     float: left;
     position: relative;
     z-index: 99999999; }
+    [class*="sidebar"] [class*="material-"] [class*="dropdown"] {
+      position: absolute; }
     [class*="material-"] [class*="dropdown"] .dropdown-title {
       display: inline-block;
       padding: .5em .8em;
