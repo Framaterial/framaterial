@@ -1,5 +1,6 @@
 Framaterial-design
 ==================
+![WIP](https://img.shields.io/badge/Work%20%3A-In%20pogress-red.svg)
 
 A Framework to create Material Design projects ! 
 
