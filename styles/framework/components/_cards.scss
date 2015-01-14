@@ -78,7 +78,7 @@
     transition: transform .3s ease, margin .3s ease, opacity .4s ease ;
     
     &[data-type*="main-modal"]{
-    position: absolute;
+      position: absolute;
       top: 10em;
       left: 0;
       right: 0; 
@@ -86,7 +86,7 @@
       z-index: 9999; 
     }
     &.off-screen{
-      transform: scale(1) translate(0, 0);
+      transform: scale(0) translate(0, 0);
       margin-top: -100px;
       opacity: 0;
 

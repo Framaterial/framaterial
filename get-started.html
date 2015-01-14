@@ -109,11 +109,13 @@ styles/min/main.min.css<!doctype html>
     &lt;!--Import Framaterial.css-->
     &lt;link type="text/css" rel="stylesheet" href="styles/framaterial.min.css" />
   &lt;/head>
+  
+  &lt;!-- The 'material-design' class will be added
+  by the framaterial.js script, so it's not required -->
+  &lt;body class="material-design">
+     
+      &lt;!-- All your framaterial goodness here ... -->
 
-  &lt;body>
-    &lt;div class="material-design-layout">
-      // All your framaterial goodness here ... 
-    &lt;/div>
     &lt;!--Import jQuery before Framaterial.js-->
     &lt;script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">&lt;/script>
     &lt;script type="text/javascript" src="scripts/framaterial.min.js">&lt;/script>
@@ -134,7 +136,7 @@ styles/min/main.min.css<!doctype html>
 
   <!-- endbower -->
   <script src="scripts/jquery.min.js"></script>
-  <script src="scripts/framaterial.js"></script>
+  <script src="scripts/framaterial.js" async></script>
   <script src="scripts/main.js"></script>
   <script src="scripts/prism.min.js"></script>
   <!-- endbuild -->

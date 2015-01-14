@@ -126,15 +126,16 @@
           li{
             color: #fff;
             display:  -webkit-flex;
-            min-width: 110px;
+            min-width: 80px;
             text-align: center;
             float: left;
-
+            text-align: center;
             a{
               width: 100%;
               height: 100%;
               float: left;
               text-align: center;
+              font-size: 13px;
             }
           }
         }
