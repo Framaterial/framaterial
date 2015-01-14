@@ -7,9 +7,6 @@ $dropdown-small-width: $dropdown-max-width/3.26;
   float: left;
   position: relative;
 
-  [class*="sidebar"] &{
-    position: absolute;
-  }
   z-index: 99999999;
   .dropdown-title{
     display: inline-block; 
