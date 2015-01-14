@@ -32,13 +32,14 @@ A Framework to create Material Design projects !
 
 #### Validate mobile version
 
-
+==================
 ### Components 
 All the components are indexed here : [Framaterial/components](https://github.com/Framaterial/components)
 
+==================
 ### Logo
 The different logo versions are hosted here  : [Framaterial/logo](https://github.com/Framaterial/logo)
 
-
+==================
 ### Contribute
-Please, if you want to add some components or if you have any ideas that could be added to the Framework, open an [issue](https://github.com/LukyVj/Framaterial-design/issues).
+Please, if you want to add some components or if you have any ideas that could be added to the Framework, open an [issue](https://github.com/framaterial/framaterial/issues).
