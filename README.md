@@ -1,6 +1,6 @@
 Framaterial-design
-==================
 ![Work in progress](https://img.shields.io/badge/Work%20%3A-In%20pogress-red.svg) ![Dependencies jQuery](https://img.shields.io/badge/dependecies-jQuery-blue.svg) ![Version 0.02](https://img.shields.io/badge/Version-0.02-green.svg)
+==================
 
 A Framework to create Material Design projects ! 
 
