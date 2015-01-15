@@ -140,12 +140,25 @@ function appendAboutModal(){
   var modalStr = '<div class="m-card bit-2 off-screen" data-type="main-modal" data-background-text="about" data-background-color="#03a9f4" data-curtain="true" data-depth="4" id="about"><header data-background></header><section class="inner__card"><h2 class="title">Framaterial V0.1 (RC.1.3)</h2><p>Framaterial - A Framework to create Material Design projects </p><ul><li>Creation : <code>Decemember 3 2014</code></li><li>Author : <code>@LukyVj</code></li><li>Contributions : <code>@Dervonderbengen</code></li><li>On Github : <code>ramaterial.github.io/framaterial</code></li></ul></section><footer><a href="#" data-btn-type="toggle" class="material-btn-flat-black">Cancel</a><a href="#" class="material-btn-flat-lightblue">Ok</a></footer></div>';
   $('.material-design-layout').append(modalStr);
 }
+
+function removeShrunk(){
+  setTimeout(function(){
+    $('.demo .sub-navigation').attr('style', '').removeClass('shrunked')
+
+  }, 05)
+  $('*').on('click', function(){
+    setTimeout(function(){
+     $('.demo .sub-navigation').attr('style', '').removeClass('shrunked')
+   }, 001)
+  })
+}
+
 toggleComponents()
 closeToggle()
 download()
 sampleLinker()
 identifier()
 appendAboutModal()
-
+removeShrunk();
 
 });

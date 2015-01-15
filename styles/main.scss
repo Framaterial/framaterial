@@ -131,7 +131,10 @@ section.toggle{
   padding: 6px;
 }
 
-.brand-logo{
+// We want to target only the project navbar, in order to avoid the logo 
+// Apparition on the examples and demo. I added a '.fm' class to the project
+// Navbar.
+.brand-logo.fm{
   background: #FFF url(../images/framaterial_logo.svg)no-repeat center center;
   background-size: 40%;
   color: transparent !important;

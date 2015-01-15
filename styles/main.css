@@ -5526,6 +5526,7 @@ a {
   [class*="material-"] [class*="m-toast"] {
     margin: 1em;
     position: fixed;
+    z-index: 99999999999999;
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
     padding: 16px 24px;
@@ -5570,6 +5571,7 @@ a {
   [class*="material-"] [class*="m-snackbar"] {
     margin: 1em;
     position: fixed;
+    z-index: 9999999;
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
     padding: 16px 24px;
@@ -5853,7 +5855,7 @@ body[data-material-theme*="black"] .box {
 [class*="bit-"] {
   padding: 6px; }
 
-.brand-logo {
+.brand-logo.fm {
   background: #FFF url(../images/framaterial_logo.svg) no-repeat center center;
   background-size: 40%;
   color: transparent !important;

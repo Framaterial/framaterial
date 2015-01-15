@@ -59,7 +59,7 @@ function hierarchy(){
 // Ripple effect 
 $(function(){
   var ink, d, x, y;
-  $("a[class*='btn']").click(function(e){
+  $("a[class*='btn'], [hasripple]").click(function(e){
     if($(this).find(".ink").length === 0){
       $(this).prepend("<div class='ink'></div>");
     }
@@ -89,15 +89,18 @@ function navigation(){
 
   function subNavigation(){
     var subNavigation = navigation.find('.sub-navigation');
+    var idi = 0;
 
     subNavigation.each(function(){
+      idi++;
       var $this = $(this);
       var navigationParent = $this.parent().closest('[class*="material-navigation"]')
-      navigationParent.addClass('sub-nav');
+      navigationParent.addClass('sub-nav').attr('id', 'subnav_'+idi);
+      $this.attr('id', 'subnav_child_'+ idi)
 
-      if($('body').find('nav[class*="material-sidebar-left"]')){
-        if($('nav[class*="material-sidebar"]').attr('data-state') == 'closed'){
-          var shrunk = $('nav[class*="material-sidebar"]').width();
+      if($('body').find('[class*="material-sidebar-left"]')){
+        if($('[class*="material-sidebar"]').attr('data-state') == 'closed'){
+          var shrunk = $('[class*="material-sidebar"]').width();
           $this.addClass('shrunked').attr('data-shrunk', shrunk);
           $this.css({
             'width': '100%',
@@ -109,7 +112,7 @@ function navigation(){
           })
         }
         else{
-          var shrunk = $('nav[class*="material-sidebar"]').width();
+          var shrunk = $('[class*="material-sidebar"]').width();
           $this.addClass('shrunked').attr('data-shrunk', shrunk);
           $this.css({
             'width': 'calc(100% - '+ shrunk+'px)',
@@ -122,8 +125,8 @@ function navigation(){
         }
 // When something is clicked, for example, the menu sidebar
         $('*').on('click', function(){
-           if($('nav[class*="material-sidebar"]').attr('data-state') == 'closed'){
-          var shrunk = $('nav[class*="material-sidebar"]').width();
+           if($('[class*="material-sidebar"]').attr('data-state') == 'closed'){
+          var shrunk = $('[class*="material-sidebar"]').width();
           $this.addClass('shrunked').attr('data-shrunk', shrunk);
           $this.css({
             'width': '100%',
@@ -135,7 +138,7 @@ function navigation(){
           })
         }
         else{
-          var shrunk = $('nav[class*="material-sidebar"]').width();
+          var shrunk = $('[class*="material-sidebar"]').width();
           $this.addClass('shrunked').attr('data-shrunk', shrunk);
           $this.css({
             'width': 'calc(100% - '+ shrunk+'px)',
@@ -150,9 +153,9 @@ function navigation(){
       }
 
       // If sidebar is on right, float header on left.
-      else if($('body').find('nav[class*="material-sidebar-right"]')){
-       if($('nav[class*="material-sidebar"]').attr('data-state') == 'closed'){
-          var shrunk = $('nav[class*="material-sidebar"]').width();
+      else if($('body').find('[class*="material-sidebar-right"]')){
+       if($('[class*="material-sidebar"]').attr('data-state') == 'closed'){
+          var shrunk = $('[class*="material-sidebar"]').width();
           $this.addClass('shrunked').attr('data-shrunk', shrunk);
           $this.css({
             'width': '100%',
@@ -164,7 +167,7 @@ function navigation(){
           })
         }
         else{
-          var shrunk = $('nav[class*="material-sidebar"]').width();
+          var shrunk = $('[class*="material-sidebar"]').width();
           $this.addClass('shrunked').attr('data-shrunk', shrunk);
           $this.css({
             'width': 'calc(100% - '+ shrunk+'px)',
@@ -178,8 +181,8 @@ function navigation(){
 
         // When something is clicked, for example, the menu sidebar
         $('*').on('click', function(){
-           if($('nav[class*="material-sidebar"]').attr('data-state') == 'closed'){
-          var shrunk = $('nav[class*="material-sidebar"]').width();
+           if($('[class*="material-sidebar"]').attr('data-state') == 'closed'){
+          var shrunk = $('[class*="material-sidebar"]').width();
           $this.addClass('shrunked').attr('data-shrunk', shrunk);
           $this.css({
             'width': '100%',
@@ -191,7 +194,7 @@ function navigation(){
           })
         }
         else{
-          var shrunk = $('nav[class*="material-sidebar"]').width();
+          var shrunk = $('[class*="material-sidebar"]').width();
           $this.addClass('shrunked').attr('data-shrunk', shrunk);
           $this.css({
             'width': 'calc(100% - '+ shrunk+'px)',
@@ -366,8 +369,9 @@ function toastsSnackbar(){
 
     idToast++;
 
+    /* If the fading time is not indicated, we add a generic one of 5 seconds */
     if(!fadeTime){
-      $this.attr('data-toast-fade-time','4');
+      $this.attr('data-toast-fade-time','5');
     }
 
     $this.attr('id','call_toast_'+ idToast)
@@ -393,8 +397,16 @@ function toastsSnackbar(){
     var posY = $this.attr('data-snackbar-posy');
     var posX = $this.attr('data-snackbar-posx');
     var content = $this.attr('data-snackbar-inner');
+     var fadeTime = $this.attr('data-snackbar-fade-time');
+     var fadeTime = fadeTime*1000;
 
     idSnack++;
+
+    /* If the fading time is not indicated, we add a generic one of 5 seconds */
+     if(!fadeTime){
+      $this.attr('data-snackbar-fade-time','5');
+    }
+
     $this.attr('id','call_snackbar_'+ idSnack)
 
     $this.parent().append('<div class="m-snackbar-'+posX+'-'+posY+'" id="snackbar_'+idSnack+'"><p>'+ content +'</p></div>');
@@ -403,6 +415,10 @@ function toastsSnackbar(){
      var thisId = $this.attr('id').replace('call_','');
      $('[id*="'+thisId+'"]').toggleClass('on-screen');
      $('[class*="m-snackbar"]').not('[class*="m-snackbar"]#'+thisId).removeClass('on-screen')
+
+     setTimeout(function(){
+        $('[id*="'+thisId+'"]').removeClass('on-screen');
+      }, fadeTime);
    });
   })
 }

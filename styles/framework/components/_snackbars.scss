@@ -2,6 +2,7 @@ $positions: 'top','left','right','bottom';
 [class*="m-snackbar"]{
   margin: 1em;
   position: fixed;
+  z-index: 99999999999999;
   background: rgba(black, .7);
   color: #fff;
   padding: 16px 24px;

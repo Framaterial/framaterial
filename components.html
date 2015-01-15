@@ -20,7 +20,7 @@
           <div class="navigation-inner"> 
             <div class="navigation-content">
               <a href="#" class="icon-menu" data-toggle="sidebar"><span class="m-icon md-navigation-menu"></span></a>
-              <a href="index.html" class="brand-logo">Framaterial</a>
+              <a href="index.html" class="brand-logo fm">Framaterial</a>
             </div>
             <ul class="navigation-side right">
               <li><a href=""></a></li>
@@ -30,20 +30,20 @@
             <div class="sub-navigation">
               <ul>
                 <li><a href="#">Typography</a></li>
-                  <li><a href="#">Grid</a></li>
-                  <li><a href="#">List</a></li>
-                  <li><a href="#">Inline lists</a></li>
-                  <li><a href="#">Forms</a></li>
-                  <li><a href="#">Buttons</a></li>
-                  <li><a href="#">Navbar</a></li>
-                  <li><a href="#">Content</a></li>
-                  <li><a href="#">Cards</a></li>
-                  <li><a href="#">Datepicker</a></li>
-                  <li><a href="#">Modals</a></li>
-                  <li><a href="#">Navigation</a></li>
-                  <li><a href="#">Progress-bars</a></li>
-                  <li><a href="#">Snackbar</a></li>
-                  <li><a href="#">Toast</a></li>
+                <li><a href="#">Grid</a></li>
+                <li><a href="#">List</a></li>
+                <li><a href="#">Inline lists</a></li>
+                <li><a href="#">Forms</a></li>
+                <li><a href="#">Buttons</a></li>
+                <li><a href="#">Navbar</a></li>
+                <li><a href="#">Content</a></li>
+                <li><a href="#">Cards</a></li>
+                <li><a href="#">Datepicker</a></li>
+                <li><a href="#">Modals</a></li>
+                <li><a href="#">Progress-bars</a></li>
+                <li><a href="#">Spinners</a></li>
+                <li><a href="#">Snackbar</a></li>
+                <li><a href="#">Toast</a></li>
               </ul>
             </div>
           </div>
@@ -74,30 +74,29 @@
           </ul>
         </nav>
 
-        <div class="material-container-layout">
+        <div class="material-container-layout demo">
           <div class="panel well bit-1">
             <div class="panel-body">
               <h2>Here is list of all the components that compose the Framework</h2>
               <p>For more concrete examples, visit the <a href="examples.html">Examples</a> page</p>
 
               <p>On this page, you'll find :</p>
-                <ul class="material-inline-list-lightblue">
-                  <li><a href="#">Typography</a></li>
-                  <li><a href="#">Grid</a></li>
-                  <li><a href="#">List</a></li>
-                  <li><a href="#">Inline lists</a></li>
-                  <li><a href="#">Forms</a></li>
-                  <li><a href="#">Buttons</a></li>
-                  <li><a href="#">Navbar</a></li>
-                  <li><a href="#">Content</a></li>
-                  <li><a href="#">Cards</a></li>
-                  <li><a href="#">Datepicker</a></li>
-                  <li><a href="#">Modals</a></li>
-                  <li><a href="#">Navigation</a></li>
-                  <li><a href="#">Progress-bars</a></li>
-                  <li><a href="#">Snackbar</a></li>
-                  <li><a href="#">Toast</a></li>
-                </ul>
+              <ul class="material-inline-list-lightblue">
+                <li><a href="#">Typography</a></li>
+                <li><a href="#">Grid</a></li>
+                <li><a href="#">List</a></li>
+                <li><a href="#">Inline lists</a></li>
+                <li><a href="#">Forms</a></li>
+                <li><a href="#">But tons</a></li>
+                <li><a href="#">Navbar</a></li>
+                <li><a href="#">Cards</a></li>
+                <li><a href="#">Datepicker</a></li>
+                <li><a href="#">Modals</a></li>
+                <li><a href="#">Navigation</a></li>
+                <li><a href="#">Progress-bars</a></li>
+                <li><a href="#">Snackbar</a></li>
+                <li><a href="#">Toast</a></li>
+              </ul>
             </div>
           </div>
 
@@ -473,11 +472,10 @@
                     <li>Item</li>
                   </ul>
                 </div>
-              </section>
+              </div>
             </div>
-          </div>
 
-          <div class="panel bit-1" data-component="inline-lists" data-linker="on">
+            <div class="panel bit-1" data-component="inline-lists" data-linker="on">
               <div class="panel-body">
                 <header class="titles"> 
                   <h3>Inline Lists</h3>
@@ -676,20 +674,471 @@
 
 
           </div>
+        </div>
+
+        <div class="panel bit-1" data-component="navbar" data-linker="on">
+          <div class="panel-body">
+            <header class="titles"> 
+              <h3>Navbar</h3>
+            </header>
+
+            <div class="bit-2">
+              <header>
+                <h4>Without ripples, left aligned</h4>
+              </header>
+              
+              <!-- A basic navigation structure -->
+              <div class="material-navigation-left-blue">
+                <div class="navigation-inner"> 
+                  <div class="navigation-content">
+                    <a href="javascript:void(0)" class="icon-menu" ><span class="m-icon md-navigation-menu"></span></a>
+                    <a href="javascript:void(0)" class="brand-logo">My brand</a>
+                  </div>
+                  <ul class="navigation-side">
+                    <li><a href="javascript:void(0)">Side items</a></li>                  
+                    <li><a href="javascript:void(0)">Side items</a></li>                  
+                    <li><a href="javascript:void(0)">Side items</a></li>                  
+                  </ul>
+                </div>
+              </div> 
+              <!-- // -->
+
+            </div>
+            <div class="bit-2">
+              <header>
+                <h4>With ripples, left aligned</h4>
+              </header>
+              
+              <!-- A basic navigation structure -->
+              <div class="material-navigation-left-cyan">
+                <div class="navigation-inner"> 
+                  <div class="navigation-content">
+                    <a href="javascript:void(0)" class="icon-menu"  hasripple><span class="m-icon md-navigation-menu"></span></a>
+                    <a href="javascript:void(0)" class="brand-logo" hasripple>My brand</a>
+                  </div>
+                  <ul class="navigation-side">
+                    <li><a href="javascript:void(0)" hasripple>Side items</a></li>                  
+                    <li><a href="javascript:void(0)" hasripple>Side items</a></li>                  
+                    <li><a href="javascript:void(0)" hasripple>Side items</a></li>                  
+                  </ul>
+                </div>
+              </div> 
+              <!-- // -->
+
+            </div>
+
+            <div class="bit-2">
+              <header>
+                <h4>Without ripples, right aligned</h4>
+              </header>
+              
+              <!-- A basic navigation structure -->
+              <div class="material-navigation-right-red">
+                <div class="navigation-inner"> 
+                  <div class="navigation-content">
+                    <a href="javascript:void(0)" class="icon-menu" ><span class="m-icon md-navigation-menu"></span></a>
+                    <a href="javascript:void(0)" class="brand-logo">My brand</a>
+                  </div>
+                  <ul class="navigation-side">
+                    <li><a href="javascript:void(0)">Side items</a></li>                  
+                    <li><a href="javascript:void(0)">Side items</a></li>                  
+                    <li><a href="javascript:void(0)">Side items</a></li>                  
+                  </ul>
+                </div>
+              </div> 
+              <!-- // -->
+
+            </div>
+            <div class="bit-2">
+              <header>
+                <h4>With ripples, right aligned</h4>
+              </header>
+              
+              <!-- A basic navigation structure -->
+              <div class="material-navigation-right-green">
+                <div class="navigation-inner"> 
+                  <div class="navigation-content">
+                    <a href="javascript:void(0)" class="icon-menu"  hasripple><span class="m-icon md-navigation-menu"></span></a>
+                    <a href="javascript:void(0)" class="brand-logo" hasripple>My brand</a>
+                  </div>
+                  <ul class="navigation-side">
+                    <li><a href="javascript:void(0)" hasripple>Side items</a></li>                  
+                    <li><a href="javascript:void(0)" hasripple>Side items</a></li>                  
+                    <li><a href="javascript:void(0)" hasripple>Side items</a></li>                  
+                  </ul>
+                </div>
+              </div> 
+              <!-- // -->
+            </div>
+
+            <div class="bit-2">
+              <header>
+                <h4>Without ripples, right aligned and subnavigation</h4>
+              </header>
+
+              <!-- A basic navigation structure -->
+              <div class="material-navigation-left-purple">
+                <div class="navigation-inner"> 
+                  <div class="navigation-content">
+                    <a href="javascript:void(0)" class="icon-menu" hasripple><span class="m-icon md-navigation-menu"></span></a>
+                    <a href="javascript:void(0)" class="brand-logo">My brand</a>
+                  </div>
+                  <ul class="navigation-side">
+                    <li><a href="javascript:void(0)">Side items</a></li>                  
+                    <li><a href="javascript:void(0)">Side items</a></li>                  
+                    <li><a href="javascript:void(0)">Side items</a></li>                  
+                  </ul>
+
+                  <!-- Here is a sub-navigation -->
+                  <div class="sub-navigation">
+                    <ul>
+                      <li><a href="javascript:void(0)">Item</a></li>
+                      <li><a href="javascript:void(0)">Item</a></li>
+                      <li><a href="javascript:void(0)">Item</a></li>
+                      <li><a href="javascript:void(0)">Item</a></li>
+                      <li><a href="javascript:void(0)">Item</a></li>
+                      <li><a href="javascript:void(0)">Item</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+              <!-- // -->
+
+            </div>
+            <div class="bit-2">
+              <header>
+                <h4>With ripples, right aligned and subnavigation</h4>
+              </header>
+
+              <!-- A basic navigation structure -->
+              <div class="material-navigation-left-cyan">
+                <div class="navigation-inner"> 
+                  <div class="navigation-content">
+                    <a href="javascript:void(0)" class="icon-menu" hasripple><span class="m-icon md-navigation-menu"></span></a>
+                    <a href="javascript:void(0)" class="brand-logo" hasripple>My brand</a>
+                  </div>
+                  <ul class="navigation-side">
+                    <li><a href="javascript:void(0)" hasripple>Side items</a></li>                  
+                    <li><a href="javascript:void(0)" hasripple>Side items</a></li>                  
+                    <li><a href="javascript:void(0)" hasripple>Side items</a></li>                  
+                  </ul>
+
+                  <!-- Here is a sub-navigation -->
+                  <div class="sub-navigation">
+                    <ul>
+                      <li><a href="javascript:void(0)" hasripple>Item</a></li>
+                      <li><a href="javascript:void(0)" hasripple>Item</a></li>
+                      <li><a href="javascript:void(0)" hasripple>Item</a></li>
+                      <li><a href="javascript:void(0)" hasripple>Item</a></li>
+                      <li><a href="javascript:void(0)" hasripple>Item</a></li>
+                      <li><a href="javascript:void(0)" hasripple>Item</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> 
+              <!-- // -->
+
+            </div>
+          </div>
         </div>  
+
+
+        <div class="panel bit-1" data-component="cards" data-linker="on">
+          <div class="panel-body">
+            <header class="titles"> 
+              <h3>Cards</h3>
+            </header>
+
+            <div class="bit-1">
+              <div class="bit-2">
+                <div class="m-card" data-background-url="../images/samples/header_sample_2.png" data-depth="3">
+                  <header data-background>
+
+                  </header>
+                  <section class="inner__card">
+                    <h2 class="title">A simple card</h2>
+                    <p>Some text..</p>
+                  </section>
+                  <footer>
+                    <a href="#" class="material-btn-flat-black">Cancel</a>
+                    <a href="#" class="material-btn-flat-lightblue">Ok</a>
+                  </footer>
+                </div>
+              </div>
+
+              <div class="bit-2">
+                <div class="m-card" data-background-url="../images/samples/header_sample_2.png" data-depth="3">
+                  <header data-background>
+
+                  </header>
+                  <section class="inner__card">
+                    <h2 class="title">A simple card</h2>
+                    <p>Some text..</p>
+                  </section>
+                  <footer>
+                    <a href="#" class="material-btn-flat-black">Cancel</a>
+                    <a href="#" class="material-btn-flat-lightblue">Ok</a>
+                  </footer>
+                </div>
+              </div>
+            </div>
+
+            <div class="bit-1">
+              <div class="bit-2">
+                <div class="m-card" data-background-url="../images/samples/header_sample_2.png" data-depth="3">
+                  <header data-background>
+
+                  </header>
+                  <section class="inner__card">
+                    <h2 class="title">Card with divider</h2>
+                    <p>Some text..</p>
+                  </section>
+                  <span class="divider"></span>
+                  <footer>
+                    <a href="#" class="material-btn-flat-black">Cancel</a>
+                    <a href="#" class="material-btn-flat-lightblue">Ok</a>
+                  </footer>
+                </div>
+              </div>
+
+              <div class="bit-2">
+                <div class="m-card" data-background-url="../images/samples/header_sample_2.png" data-depth="3">
+                  <header data-background>
+
+                  </header>
+                  <section class="inner__card">
+                    <h2 class="title">Card with divider</h2>
+                    <p>Some text..</p>
+                  </section>
+                  <span class="divider"></span>
+
+                  <footer>
+                    <a href="#" class="material-btn-flat-black">Cancel</a>
+                    <a href="#" class="material-btn-flat-lightblue">Ok</a>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="panel bit-1" data-component="progress-bars" data-linker="on">
+          <div class="panel-body">
+            <header class="titles"> 
+              <h3>Progress-bars</h3>
+            </header>
+
+            <div class="bit-1">
+              <div class="bit-2">
+                <header>
+                  <h2>Determinate</h2>
+                </header>
+                <section>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus deleniti sunt, minima atque debitis nostrum natus mollitia veritatis reiciendis et ducimus amet eaque alias iste impedit, quisquam quae eum odit!</p>
+                </section>
+              </div>
+
+              <div class="bit-1">
+               <header>
+                <h4>Fixed</h4>
+                <span class="divider"></span>
+              </header>
+              <progress class="m-progress-red" value="20" max="100">70%</progress>
+              <progress class="m-progress-green" value="40" max="100">40%</progress>
+              <progress class="m-progress-blue" value="60" max="100">70%</progress>
+              <progress class="m-progress-orange" value="80" max="100">80% </progress>
+
+              <header>
+                <h4>Animated</h4>
+                <span class="divider"></span>
+              </header>
+              <progress class="m-progress-red" value="100" max="100" data-type="animated" data-timeload="3s">70%</progress>
+              <progress class="m-progress-green" value="100" max="100" data-type="animated" data-timeload="6s">40%</progress>
+              <progress class="m-progress-blue" value="100" max="100" data-type="animated" data-timeload="12s">60%</progress>
+              <progress class="m-progress-orange" value="100" max="100" data-type="animated" data-timeload="18s">80%</progress>
+
+            </div>
+          </div>
+
+
+          <div class="bit-1">
+            <div class="bit-1">
+              <header>
+                <h2>Indeterminate</h2>
+              </header>
+              <section>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus deleniti sunt, minima atque debitis nostrum natus mollitia veritatis reiciendis et ducimus amet eaque alias iste impedit, quisquam quae eum odit!</p>
+              </section>
+            </div>
+
+            <div class="bit-1">
+
+
+              <header>
+                <h4>Animated</h4>
+                <span class="divider"></span>
+              </header>
+              <progress class="m-progress-red" value="100" max="100" data-timeload="1s" data-type="indeterminate">70%</progress>
+              <progress class="m-progress-green" value="100" max="100" data-timeload="2s" data-type="indeterminate">40%</progress>
+              <progress class="m-progress-blue" value="100" max="100" data-timeload="3s" data-type="indeterminate">60%</progress>
+              <progress class="m-progress-orange" value="100" max="100" data-timeload="4s" data-type="indeterminate">80%</progress>
+
+
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <script>
+      <div class="panel bit-1" data-component="spinners" data-linker="on">
+        <div class="panel-body">
+          <header class="titles"> 
+            <h3>Spinners</h3>
+          </header>
 
-  </script>
+
+          <div class="bit-1">
+            <div class="bit-1">
+              <header>
+                <h2>Spinner</h2>
+              </header>
+              <section>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus deleniti sunt, minima atque debitis nostrum natus mollitia veritatis reiciendis et ducimus amet eaque alias iste impedit, quisquam quae eum odit!</p>
+              </section>
+            </div>
+
+            <div class="bit-1">
+
+
+              <header>
+                <h4>Determinate</h4>
+                <span class="divider"></span>
+              </header>
+              <div class="m-spinner-red"></div>
+              <div class="m-spinner-green"></div>
+              <div class="m-spinner-blue"></div>
+              <div class="m-spinner-indigo"></div>
+            </div>
+            <div class="bit-1">
+              <header>
+                <h4>Indeterminate</h4>
+                <span class="divider"></span>
+              </header>
+              <div class="m-spinner-red" data-type="indeterminate"></div>
+              <div class="m-spinner-green" data-type="indeterminate"></div>
+              <div class="m-spinner-blue" data-type="indeterminate"></div>
+              <div class="m-spinner-indigo" data-type="indeterminate"></div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="panel bit-1" data-component="snackbar" data-linker="on">
+        <div class="panel-body">
+          <header class="titles"> 
+            <h3>Snackbars</h3>
+          </header>
+
+          <div class="bit-1">
+
+            <a 
+            href="#snackbar1" 
+            class="material-btn-blue" 
+            data-toggle="snackbar" 
+            data-snackbar-posy="bottom" 
+            data-snackbar-posx="left" 
+            data-snackbar-inner="I'm a snackbar message"
+            data-snackbar-fade-time="3">Show snackbar bottom left</a>
+
+            <a 
+            href="#snackbar2" 
+            class="material-btn-blue" 
+            data-toggle="snackbar" 
+            data-snackbar-posy="bottom" 
+            data-snackbar-posx="right" 
+            data-snackbar-inner="I'm a snackbar message">Show snackbar bottom right</a>
+
+            <a 
+            href="#snackbar3" 
+            class="material-btn-blue" 
+            data-toggle="snackbar" 
+            data-snackbar-posy="top" 
+            data-snackbar-posx="right" 
+            data-snackbar-inner="I'm a snackbar message">Show snackbar top right</a>
+
+            <a 
+            href="#snackbar4" 
+            class="material-btn-blue" 
+            data-toggle="snackbar" 
+            data-snackbar-posy="top" 
+            data-snackbar-posx="left" 
+            data-snackbar-inner="I'm a snackbar message">Show snackbar top left</a>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="panel bit-1" data-component="toasts" data-linker="on">
+        <div class="panel-body">
+          <header class="titles"> 
+            <h3>Toasts</h3>
+          </header>
+
+          <div class="bit-1">
+
+            <a
+            href="#toast1"
+            class="material-btn-blue"
+            data-toggle="toast"
+            data-toast-posy="bottom"
+            data-toast-posx="left"
+            data-toast-inner="I'm a toast message"
+            data-toast-fade-time="2">Show Toast bottom left</a>
+
+
+            <a
+            href="#toast2"
+            class="material-btn-blue"
+            data-toggle="toast"
+            data-toast-posy="bottom"
+            data-toast-posx="right"
+            data-toast-inner="I'm a toast message">Show Toast bottom right</a>
+
+            <a
+            href="#toast3"
+            class="material-btn-blue"
+            data-toggle="toast"
+            data-toast-posy="top"
+            data-toast-posx="right"
+            data-toast-inner="I'm a toast message">Show Toast top right</a>
+
+            <a
+            href="#toast4"
+            class="material-btn-blue"
+            data-toggle="toast"
+            data-toast-posy="top"
+            data-toast-posx="left"
+            data-toast-inner="I'm a toast message">Show Toast top left</a>
+
+          </div>
+          
+        </div>
+      </div>
+
+      <script>
+
+      </script>
 
 
 
-  <!-- build:js scripts/vendor.js -->
-  <script src="scripts/jquery.min.js"></script>
-  <script src="scripts/framaterial.js" async></script>
-  <script src="scripts/main.js"></script>
-</body>
-</html>
+      <!-- build:js scripts/vendor.js -->
+      <script src="scripts/jquery.min.js"></script>
+      <script src="scripts/framaterial.js" async></script>
+      <script src="scripts/main.js"></script>
+    </body>
+    </html>
