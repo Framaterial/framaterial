@@ -8,19 +8,10 @@
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-  <!-- build:css styles/vendor.css -->
-  <!-- bower:css -->
-  <!-- endbower -->
-  <!-- endbuild -->
-
-  <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.min.css">
-  <!-- endbuild -->
-
-  <!-- build:js scripts/vendor/modernizr.js -->
+  <link rel="stylesheet" href="styles/prism.css">
   <script src="bower_components/modernizr/modernizr.js"></script>
-  <!-- endbuild -->
-</head>
+  </head>
 <body>
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -28,7 +19,7 @@
 
             <div class="material-design-layout">
 
-              <div class="material-navigation-left-lightblue-absolute">
+              <div class="material-navigation-left-lightblue-fixed">
                 <div class="navigation-inner"> 
                   <div class="navigation-content">
                     <a href="#" class="icon-menu" data-toggle="sidebar"><span class="m-icon md-navigation-menu"></span></a>
@@ -80,7 +71,7 @@
                         <h3>Initialize framaterial</h3>                      
                       </header>
                       <ul class="material-inline-list">
-                        <li><a href="#"><code>.material-design</code> class</a></li>
+                        <li><a href="#material-design-class"><code>.material-design</code> class</a></li>
                       </ul>
                     </div>
                     <div class="bit-2">
@@ -88,7 +79,7 @@
                         <h3>Sidebar</h3>                      
                       </header>
                       <ul class="material-inline-list">
-                        <li><a href="#">Custom header</a></li>
+                        <li><a href="#custom-header">Custom header</a></li>
                       </ul>
                     </div>
                     <div class="bit-2"> 
@@ -139,9 +130,216 @@
         </div>
       </div>
     </div>
+    
 
-  </div>
+      <div class="panel bit-1">
+        <div class="panel-body">
+          <header>
+            <h2>Initialize Framaterial</h2>
+          </header>
+          <section>
+          <span class="divider"></span>
+            <article>
+              <header id="material-design-class">
+              <h3>The <code>.material-design</code> class</h3>
+            </header>
+            <p>When you load <code>framaterial.js</code> onto your website, the script will look for a <code>.material-design</code> class, somewhere in your html. If the class is not found, the script will append it to the <code>&lt;body></code> tag. <span class="cf"></span>We recommand to add it directly when you start a framaterial project.</p>
+            </article>
+          </section>
+        </div>
+      </div>
 
+      <div class="panel bit-1">
+        <div class="panel-body">
+          <header>
+            <h2>Sidebar</h2>
+          </header>
+          <section>
+          <span class="divider"></span>
+           <article>
+              <header id="ripples-on-element">
+              <h3>Custom header</h3>
+            </header>
+            <p>When you create a <a href="examples/sidebar.html">sidebar</a>, you probably want to add an header image to it, to add more impact or just to match your identity.</p>
+            <p>To do it, you just have to add a custom <code>data-attribute</code> on the <code>&lt;header></code> tag :</p>
+
+            <pre><code class="language-markup">&lt;nav class="material-sidebar-left-out-lightblue" data-state="open"> 
+
+&lt;header data-image-url="path/to/your/image.png|svg|jpeg|gif">
+&lt;/header>
+
+&lt;ul> 
+  &lt;li>&lt;a href="#">item&lt;/a>&lt;/li>
+  &lt;li>&lt;a href="#">item&lt;/a>&lt;/li>
+  &lt;li>&lt;a href="#">item&lt;/a>&lt;/li>
+  &lt;li>&lt;a href="#">item&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;span class="divider">&lt;/span>
+&lt;ul> 
+  &lt;li>&lt;a href="#">item&lt;/a>&lt;/li>
+  &lt;li>&lt;a href="#">item&lt;/a>&lt;/li>
+  &lt;li>&lt;a href="#">item&lt;/a>&lt;/li>
+  &lt;li>&lt;a href="#">item&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/nav></code></pre>
+           </article>
+          </section>
+        </div>
+      </div>
+
+
+      <div class="panel bit-1">
+        <div class="panel-body">
+          <header>
+            <h2>Ripples</h2>
+          </header>
+          <section>
+          <span class="divider"></span>
+            <article>
+              <header id="ripples-on-elements">
+              <h3>Ripples on elements</h3>
+            </header>
+            <p>There is a sweet concept that comes with Material design, it's the "Ripples" effect, typically, it's a ripple effect animation that occurs on some clicked elements such as buttons.</p>
+            <p>By default, the effect is applied to buttons, but you can add it on any alements you want, by giving them the attribute : <code>hasRipple</code></p>
+            <pre><code class="language-markup">&lt;!-- Without ripples -->
+&lt;ul>
+  &lt;li>&lt;a href="#"> item &lt;/a>&lt;/li>
+  &lt;li>&lt;a href="#"> item &lt;/a>&lt;/li>
+  &lt;li>&lt;a href="#"> item &lt;/a>&lt;/li>
+&lt;/ul>
+
+&lt;!-- With ripples -->
+&lt;ul>
+  &lt;li>&lt;a href="#" hasRipple> item &lt;/a>&lt;/li>
+  &lt;li>&lt;a href="#" hasRipple> item &lt;/a>&lt;/li>
+  &lt;li>&lt;a href="#" hasRipple> item &lt;/a>&lt;/li>
+&lt;/ul>
+            </code></pre>
+            <p>And this attribute can be used on any elements you want, images included</p>
+            </article>
+            <span class="divider"></span>
+            <article>
+              <header>
+                <h3>Default Ripple behaviour</h3>
+              </header>
+              <p>As mentionned over, by default, the ripple effect is applied on any kind of <a href="examples/buttons.html">buttons</a>.</p>
+            </article>
+          </section>
+        </div>
+      </div>
+
+      <div class="panel bit-1">
+        <div class="panel-body">
+          <header>
+            <h2>Cards and Modals</h2>
+          </header>
+           <p>The cards are a nice asset in the Material guidelines, it's the bridge between desktop and mobile interface, giving us the ability to evovle in an interface, with cards, that could perfectly addapt to each screen size, and here are few features made for them, powered by javascript</p>
+          <section>
+          <span class="divider"></span>
+            <article>
+              <header id="header-image">
+              <h3>Header Image</h3>
+            </header>
+
+            <p>Sometimes, you will want to add an image to your cards or modals, to illustrate a context, to give an information or anything else, and thats why the possibility to change an header image is simple, just a custom <code>data-attribute</code> to use :</p>
+            <pre><code class="language-markup">&lt;!-- Indicate the image url with the data-background-url -->
+&lt;div class="m-card" data-type="modal"  data-background-url="../images/samples/header_sample_2.png">
+
+&lt;!-- Then indicate where to put it. Right now, the only available position is on the header -->
+&lt;header data-background>
+&lt;/header>
+&lt;section class="inner__card">
+  &lt;h2 class="title">A simple card&lt;/h2>
+  &lt;p>Some text..&lt;/p>
+&lt;/section>
+&lt;footer>
+  &lt;a href="#" data-btn-type="toggle" class="material-btn-flat-black">Cancel&lt;/a>
+  &lt;a href="#" class="material-btn-flat-lightblue">Ok&lt;/a>
+&lt;/footer>
+&lt;/div></code></pre>
+          <p>As you can see, after indicating the <code>data-background-url</code>, you have to call it on the <code>&lt;header></code> tag.</p>
+           
+            </article>
+
+<span class="divider"></span>
+            <article>
+              <header id="header-color">
+              <h3>Header Color</h3>
+            </header>
+            <p>Instead of images, sometimes you may only want to use a color, the proceedure is the same as for the image, but with an other <code>data-attribute</code> :</p>
+            <pre><code class="language-markup">&lt;!-- Indicate the header color with the data-background-color -->
+&lt;div class="m-card" data-type="modal"  data-background-color="#03a9f4">
+
+&lt;!-- Then indicate where to put it. Right now, the only available position is on the header -->
+&lt;header data-background>
+&lt;/header>
+&lt;section class="inner__card">
+  &lt;h2 class="title">A simple card&lt;/h2>
+  &lt;p>Some text..&lt;/p>
+&lt;/section>
+&lt;footer>
+  &lt;a href="#" data-btn-type="toggle" class="material-btn-flat-black">Cancel&lt;/a>
+  &lt;a href="#" class="material-btn-flat-lightblue">Ok&lt;/a>
+&lt;/footer>
+&lt;/div></code></pre>
+            </article>
+
+<span class="divider"></span>
+            <article>
+              <header id="header-text">
+              <h3>Header Text</h3>
+            </header>
+           <p>You may want to use text on this zone, to give a title or to indicate something to the user, there is a <code>data-attribute</code> for it:</p>
+            <pre><code class="language-markup">&lt;!-- Indicate the text to disaply with the data-background-text -->
+&lt;div class="m-card" data-type="modal"  data-background-text="I'm a header" >
+
+&lt;!-- Then indicate where to put it. Right now, the only available position is on the header -->
+&lt;header data-background>
+&lt;/header>
+&lt;section class="inner__card">
+  &lt;h2 class="title">A simple card&lt;/h2>
+  &lt;p>Some text..&lt;/p>
+&lt;/section>
+&lt;footer>
+  &lt;a href="#" data-btn-type="toggle" class="material-btn-flat-black">Cancel&lt;/a>
+  &lt;a href="#" class="material-btn-flat-lightblue">Ok&lt;/a>
+&lt;/footer>
+&lt;/div></code></pre>
+<p>Of course, you can merge all the attributes to personalize your modals.</p>
+            </article>
+
+<span class="divider"></span>
+             <article>
+              <header id="modal-behaviour">
+              <h3>Modal behaviour</h3>
+            </header>
+            <p>To turn a basic card into a modal, you have to add the <code>data-type="modal"</code> to your card, here is a simple example</p>
+            <pre><code class="language-markup">&lt;div class="m-card" data-background-color="tomato" data-abckground-text="I am a modal" data-type="modal" data-depth="3" id="modal">
+&lt;header data-background>
+&lt;/header>
+&lt;section class="inner__card">
+&lt;h2 class="title">A simple card&lt;/h2>
+&lt;p>Some text..&lt;/p>
+&lt;/section>
+&lt;footer>
+&lt;a href="#modal" data-btn-type="toggle" class="material-btn-flat-black">Cancel&lt;/a>
+&lt;a href="#" class="material-btn-flat-lightblue">Ok&lt;/a>
+&lt;/footer>
+&lt;/div></code></pre>
+<p>The aim of a modal is to be toggled when needed, for it you need to add an attribute on the link you want to use to trigger the modal, the <code>data-btn-type="modal"</code> attribute.</p>
+</article>
+<span class="divider"></span>
+          <article>
+          <header>
+          <h3>Demo</h3>
+          </header>
+          <p data-height="268" data-theme-id="294" data-slug-hash="afb3adc8fbd5efd73f840b1606a6157e" data-default-tab="result" data-user="LukyVj" class='codepen'>See the Pen <a href='http://codepen.io/LukyVj/pen/afb3adc8fbd5efd73f840b1606a6157e/'>afb3adc8fbd5efd73f840b1606a6157e</a> by LukyVJ (<a href='http://codepen.io/LukyVj'>@LukyVj</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+            </article>
+          </section>
+        </div>
+      </div>
+    </div>
 </div>
 
 <script>
@@ -154,6 +352,7 @@
 <script src="scripts/jquery.min.js"></script>
 <script src="scripts/framaterial.js" async></script>
 <script src="scripts/main.js"></script>
+<script src="scripts/prism.min.js"></script>
 <!-- endbuild -->
 </body>
 </html> 

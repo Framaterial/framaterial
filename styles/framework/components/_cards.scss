@@ -78,7 +78,7 @@
     transition: transform .3s ease, margin .3s ease, opacity .4s ease ;
     
     &[data-type*="main-modal"]{
-      position: absolute;
+      position: fixed;
       top: 10em;
       left: 0;
       right: 0; 

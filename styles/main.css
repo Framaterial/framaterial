@@ -5300,7 +5300,7 @@ a {
       transition: -webkit-transform 0.3s ease, margin 0.3s ease, opacity 0.4s ease;
       transition: transform 0.3s ease, margin 0.3s ease, opacity 0.4s ease; }
       [class*="material-"] [class*="-card"][data-type*="modal"][data-type*="main-modal"] {
-        position: absolute;
+        position: fixed;
         top: 10em;
         left: 0;
         right: 0;
