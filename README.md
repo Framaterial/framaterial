@@ -8,7 +8,7 @@ A Framework to create Material Design projects !
 Download the code from github ( [framaterial.min.css](https://raw.githubusercontent.com/Framaterial/framaterial/gh-pages/framaterial/styles/framaterial.min.css) & [framaterial.min.js](https://raw.githubusercontent.com/Framaterial/framaterial/gh-pages/scripts/framaterial.min.js) ), or install with bower : 
 ```
 $ bower install framaterial
-``
+```
 
 ### ToDo
 #### Add all components
