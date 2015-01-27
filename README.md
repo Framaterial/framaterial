@@ -4,6 +4,10 @@ Framaterial
 
 A Framework to create Material Design projects ! 
 
+### Installation 
+Download the code from github ( framaterial.min.css & framaterial.min.js ), or install with bower : 
+`$ bower install framaterial`
+
 ### ToDo
 #### Add all components
   - [x] Forms
