@@ -44,7 +44,7 @@ a{
   @import "components/_buttons.scss";
   @import "components/_icons.scss";
   @import "components/_navigation.scss";
-  @import "components/_forms.scss";
+  @import "components/_forms.scss"; 
   @import "components/_sidebar.scss";
   @import "components/_dropdown.scss";
   @import "components/_components_classes.scss";
@@ -61,6 +61,9 @@ a{
   @import "components/_snackbars.scss";
   // Features
   @import "features/_effects.scss";
+
+  // Responsive
+  @import "core/_responsive.scss";
 }
 
 

@@ -4,6 +4,7 @@
 // Unrelated to material
 // It's just the page presentation
 header{
+
   &.titles{
     background: #fff;
     float: left; 
@@ -136,7 +137,7 @@ section.toggle{
 // Navbar.
 .brand-logo.fm{
   background: #FFF url(../images/framaterial_logo.svg)no-repeat center center;
-  background-size: 40%;
+  background-size: 45%;
   color: transparent !important;
   text-indent: -9999px !important;
   width: 168px;

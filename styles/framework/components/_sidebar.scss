@@ -79,11 +79,13 @@ $sidebar-width: 240px;
       float: left;
       left: 0;
 
-      &[class*="in-"]{
-        box-shadow: inset -2em 0 1em -2em rgba(black, .4);
-      }
-      &[class*="out-"]{
-        box-shadow:  .5em 0 1em  rgba(black, .4);
+      @media all and (max-width: $breakpoint-wide){
+        &[class*="in-"]{
+          box-shadow: inset -2em 0 1em -2em rgba(black, .4);
+        }
+        &[class*="out-"]{
+          box-shadow:  .5em 0 1em  rgba(black, .4);
+        }
       }
 
       &[data-state*="closed"]{

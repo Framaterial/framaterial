@@ -339,6 +339,55 @@
           </section>
         </div>
       </div>
+
+
+    <div class="panel bit-1">
+      <div class="panel-body">
+        <header>
+          <h2>Toasts & Snackbars</h2>
+        </header>
+         <p>This component is a must have for material design frameworks, it's a new way to display informations to your user, showing him small messages box, that appear on a corner of the screen, as well a desktop screen to a smartphone screen.</p>
+         <p>All the javascript functions presented here works on both toasts and snackbars.</p>
+        <span class="divider"></span>
+            <article>
+              <header id="header-image">
+                <h3>Toasts & Snackbars text</h3>
+              </header> 
+              <p>To add a custom message to your toasts and snackbars, you just have to fill the proper attribute <code>(data-toast-inner)</code> on the trigger :</p>
+              <pre><code class="language-markup">&lt;a href="#toast1" data-toast-inner="I'm a toast message" data-toggle="toast">Show toast&lt;/a></code></pre>
+              <p>And repeat the operation to add a text to a snackbar :</p>
+              <pre><code class="language-markup">&lt;a href="#snackbar1" data-snackbar-inner="I'm a snackbar message" data-toggle="snackbar">Show snackbar&lt;/a></code></pre>
+              <p>Of course, the good thing about those toasts & snackbars, is that they are fully customizables, you can set any messages or auto generated messages, for example :</p>
+              <pre><code class="language-markup">&lt;script>
+$(function(){
+  
+  var i = 0;
+
+  setInterval(function(){
+    i++;
+    $('a').attr('data-toast-inner',i);
+  }, 1000);
+
+  $('a').on('click', function(e){
+    $('#toast_1').empty().html($('a[href*="toast"]').attr('data-toast-inner'));
+  })
+
+});
+&lt;/script>            
+&lt;a
+href="#toast1"                     &lt;!-- Toast target-->
+class="material-btn-blue"
+data-toggle="toast"                &lt;!-- Which toggle &lt;toast>&lt;snackbar>-->
+data-toast-posy="bottom"           &lt;!-- Position on Y axis-->
+data-toast-posx="right"            &lt;!-- Position on X axis-->
+data-toast-inner="Hello"           &lt;!-- Message of the toast-->
+data-toast-delay="5"               &lt;!-- Delay until fadeout-->
+>Show Toast top left&lt;a>
+</code></pre>
+<p> This is a, example of what is possible with those toasts and snackbars, you can of course merge them with a templating system such as handlebars.</p>
+            </article>
+          </div>
+        </div>
     </div>
 </div>
 

@@ -1,0 +1,62 @@
+<!doctype html>
+<html class="no-js">
+<head style="padding-bottom:30px">
+  <meta charset="utf-8">
+  <title>MaterialFramework - Modals</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+
+  <link rel="stylesheet" href="../styles/main.min.css">  
+  <script src="../bower_components/modernizr/modernizr.js"></script>
+</head>
+<body >
+<div class="material-design-layout" style="padding-bottom:20px;">
+          
+<a
+href="#toast1"
+class="material-btn-blue"
+data-toggle="toast"
+data-toast-posy="bottom"
+data-toast-posx="right"
+data-toast-inner="I'm a toast message"
+data-toast-delay="5"
+id="t1"
+>Show Toast top left</a>
+
+
+
+
+
+
+  </div>
+
+
+  <script src="t/jquery.js"></script>
+  <script src="../scripts/framaterial.js"></script>
+  <script src="../scripts/main.js"></script>
+      <script>
+$(function(){
+  
+  var i = 0;
+
+  setInterval(function(){
+    i++;
+    $('a').attr('data-toast-inner',i);
+  
+    }, 1000);
+
+  $('a').on('click', function(e){
+        $('#toast_1').empty().html($('a[href*="toast"]').attr('data-toast-inner'));
+
+  })
+
+
+
+});  
+</script>  
+  
+</body>
+</html>

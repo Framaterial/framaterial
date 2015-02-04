@@ -1,0 +1,19 @@
+// @media all and (max-width: $breakpoint-wide){
+//   [class*="sidebar"]{
+//     display: none;
+//   }
+//   [data-state*=open]+[class*=material-container][class*="material-container"]{
+//     width: 100%;
+//     left: 0;
+//   }
+// }
+
+// @media all and (max-width: $breakpoint-regular){
+//   [class*="sidebar"]{
+//     display: none;
+//   }
+//   [class*="material-container"]{
+//     width: 100%;
+//     left: 0;
+//   }
+// }

@@ -3970,10 +3970,11 @@ a {
     [class*="material-"] [class*="sidebar-"][class*="-left"] {
       float: left;
       left: 0; }
-      [class*="material-"] [class*="sidebar-"][class*="-left"][class*="in-"] {
-        box-shadow: inset -2em 0 1em -2em rgba(0, 0, 0, 0.4); }
-      [class*="material-"] [class*="sidebar-"][class*="-left"][class*="out-"] {
-        box-shadow: 0.5em 0 1em rgba(0, 0, 0, 0.4); }
+      @media all and (max-width: 960px) {
+        [class*="material-"] [class*="sidebar-"][class*="-left"][class*="in-"] {
+          box-shadow: inset -2em 0 1em -2em rgba(0, 0, 0, 0.4); }
+        [class*="material-"] [class*="sidebar-"][class*="-left"][class*="out-"] {
+          box-shadow: 0.5em 0 1em rgba(0, 0, 0, 0.4); } }
       [class*="material-"] [class*="sidebar-"][class*="-left"][data-state*="closed"] {
         left: -240px;
         box-shadow: 0 0 0; }
@@ -5857,7 +5858,7 @@ body[data-material-theme*="black"] .box {
 
 .brand-logo.fm {
   background: #FFF url(../images/framaterial_logo.svg) no-repeat center center;
-  background-size: 40%;
+  background-size: 45%;
   color: transparent !important;
   text-indent: -9999px !important;
   width: 168px; }
