@@ -5856,7 +5856,7 @@ body[data-material-theme*="black"] .box {
 [class*="bit-"] {
   padding: 6px; }
 
-.brand-logo.fm {
+.brand-logo {
   background: #FFF url(../images/framaterial_logo.svg) no-repeat center center;
   background-size: 45%;
   color: transparent !important;
