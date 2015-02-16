@@ -1,136 +1,57 @@
-// Colors 
-@each $name, $variable in $colors {
-  &[class*="-#{($name)}"]{
+$theme-base: #5c5c5c;
+$theme-hl: #0f9d58;
+$theme-txt: #fff;
+
+$track-w: 20em;
+$track-h: .25em;
+$track-pad: $track-h/2;
+
+$thumb-d: 1.5em;
+
+$input-w: $track-w + $track-h + $thumb-d;
+$input-h: 5em;
 
 
 
-    &[class*=" active"]{
-      background: darken($variable, 1%) !important;
-    }
+// @mixin track() {
+//   border: none;
+//   padding: 0 $track-h/2;
+//   width: $track-w; height: $track-h;
+//   border-radius: $track-h/2;
+//   background: $theme-base;
+// }
+
+// @mixin track-focus() {
+//   .js & {
+//     background: linear-gradient(transparent, transparent), linear-gradient($theme-hl, $theme-hl) no-repeat $theme-base;
+//     background-size: $track-w/5 100%, 60% 100%;
+//   }
+// }
+
+// @mixin track-active() {
+//   background: radial-gradient(circle, white $track-h/2, transparent $track-h/2) ($track-w)/10 50% content-box border-box $theme-base;
+//   background-size: $track-w/5 100%;
+
+//   .js & {
+//     background:  radial-gradient(circle, white $track-h/2, transparent $track-h/2)  ($track-w)/10 50% content-box border-box, linear-gradient($theme-hl, $theme-hl) no-repeat $theme-base;
+//     background-size: $track-w/5 100%, 60% 100%;
+//   }
+// }
+
+// @mixin thumb() {
+//   box-sizing: border-box;
+//   width: $thumb-d; height: $thumb-d;
+//   border-radius: 50%;
+//   background: $theme-base;
+//   transition: .3s;
+// }
+
+// @mixin thumb-focus() {
+//   background: $theme-hl;
+// }
 
 
-
-
-
-
-  }
-
-  blockquote{
-    &[class*="#{($name)}"]{
-      box-shadow: -.5em 0 0 $variable;
-    }
-  }
-  
-
-  [class*="m-card"],
-  [data-card-type*="datepicker"]{
-    &[class*="-#{($name)}"]{
-
-      &:not([data-card-type*="datepicker"]){
-        footer{
-          background-color: $variable;
-          color: #fff !important;
-
-
-          @if $name == 'yellow' 
-          or $name == 'amber'
-          or $name == 'lime'
-          or $name == 'grey'
-          or $name == 'white'{ 
-            color: #000 !important;
-            background-color: #{($variable)};           
-          }
-        }
-      }
-      header,{
-        background-color: $variable;
-        color: #fff;
-
-        @if $name == 'yellow' 
-        or $name == 'amber'
-        or $name == 'lime'
-        or $name == 'grey'
-        or $name == 'white'{ 
-          color: #000 !important;
-          background-color: #{($variable)};           
-        }
-      }
-
-      .pmu-instance .pmu-selected {
-        background-color: #{($variable)} !important;          
-      }
-    }
-  }
-
-  progress[class*="m-progress"]{
-    &[class*="-#{($name)}"]{
-      color: $variable;
-
-      &::-webkit-progress-bar{
-        background: rgba($variable, .3)
-      }
-    }
-  }
-
-  [class*="m-spinner"]{
-    &[class*="-#{($name)}"]{
-      svg .path{
-        stroke: $variable;
-      }
-    }
-  }
-
-
-
-
-}
-
-@each $name, $variable in $colors {
-  input{
-    &[class*="-#{($name)}"]{
-      &~label .ripple{
-        color: $variable;
-      }
-
-      &[type*="radio"]{
-        &~ label {
-          &:before,&:after{
-            color: $variable;
-          }
-        }
-      }
-
-      &[type*="range"]{
-        color: $variable;
-        &:focus:active{
-          &::-webkit-slider-thumb {
-            box-shadow: 0 0 0 12px rgba($variable, .2);
-          }
-        }
-      }
-    }
-  }
-
-   &[class*="-inline-list"]{
-    &[class*="-#{($name)}"]{
-      li{
-        box-shadow: 0 0 1px $variable;
-        color: $variable;
-        a{
-          color: $variable;
-        }
-        &:hover{
-          background: rgba($variable, .1)
-        }
-      }
-    }
-   }
-
-
-   /*------------------------------
-   Discrete slider 
-  -------------------------------*/
-  input[type='range'][class*="-discrete"][class*="-#{($name)}"] {
+input[type='range'][class*="-discrete"] {
   &, 
   &::-webkit-slider-runnable-track, 
   &::-webkit-slider-thumb {
@@ -213,7 +134,7 @@
       border-radius: 50% 50% 0 50%;
       transform: translate(-50%, -$thumb-d) rotate(45deg) scale(.2);
       opacity: .01;
-      background: $variable;
+      background: $theme-hl;
       content: '';
     }
     
@@ -232,28 +153,28 @@
     
     &::-webkit-slider-runnable-track {
        .js & {
-    background: linear-gradient(transparent, transparent), linear-gradient($variable, $variable) no-repeat $theme-base;
+    background: linear-gradient(transparent, transparent), linear-gradient($theme-hl, $theme-hl) no-repeat $theme-base;
     background-size: $track-w/5 100%, 60% 100%;
   }
     }
     &::-moz-range-track {
        .js & {
-    background: linear-gradient(transparent, transparent), linear-gradient($variable, $variable) no-repeat $theme-base;
+    background: linear-gradient(transparent, transparent), linear-gradient($theme-hl, $theme-hl) no-repeat $theme-base;
     background-size: $track-w/5 100%, 60% 100%;
   }
     }
     &::-ms-fill-lower {
-      background: $variable;
+      background: $theme-hl;
     }
 
     &::-webkit-slider-thumb {
-        background: $variable;
+        background: $theme-hl;
     }
     &::-moz-range-thumb {
-        background: $variable;
+        background: $theme-hl;
     }
     &::-ms-thumb {
-        background: $variable;
+        background: $theme-hl;
     }
     
     .js & /deep/ #thumb {
@@ -274,7 +195,7 @@
   background-size: $track-w/5 100%;
 
   .js & {
-    background:  radial-gradient(circle, white $track-h/2, transparent $track-h/2)  ($track-w)/10 50% content-box border-box, linear-gradient($variable, $variable) no-repeat $theme-base;
+    background:  radial-gradient(circle, white $track-h/2, transparent $track-h/2)  ($track-w)/10 50% content-box border-box, linear-gradient($theme-hl, $theme-hl) no-repeat $theme-base;
     background-size: $track-w/5 100%, 60% 100%;
   }
     }
@@ -283,7 +204,7 @@
   background-size: $track-w/5 100%;
 
   .js & {
-    background:  radial-gradient(circle, white $track-h/2, transparent $track-h/2)  ($track-w)/10 50% content-box border-box, linear-gradient($variable, $variable) no-repeat $theme-base;
+    background:  radial-gradient(circle, white $track-h/2, transparent $track-h/2)  ($track-w)/10 50% content-box border-box, linear-gradient($theme-hl, $theme-hl) no-repeat $theme-base;
     background-size: $track-w/5 100%, 60% 100%;
   }
     }
@@ -298,19 +219,18 @@
       background: 
     radial-gradient(circle, 
       white $track-h/2, transparent $track-h/2) 
-    ($track-w)/10 50% content-box border-box $variable;
+    ($track-w)/10 50% content-box border-box $theme-hl;
   background-size: $track-w/5 100%;
     }
 
     &::-webkit-slider-thumb {
-        background: $variable;
+        background: $theme-hl;
     }
     &::-moz-range-thumb {
-        background: $variable;
+        background: $theme-hl;
     }
     &::-ms-thumb {
-        background: $variable;
+        background: $theme-hl;
     }
   }
-}
 }

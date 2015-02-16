@@ -20,6 +20,7 @@
 
       <header>
         <h2>Forms components</h2>
+        <p>Fram makes it easy to create beautiful forms, we created a bunch of components, that follows the Material design look and feel.</p>
       </header>
     </div>
 
@@ -30,7 +31,7 @@
           <h2>Checkboxes & radios</h2>
         </header>
         <section>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus deleniti sunt, minima atque debitis nostrum natus mollitia veritatis reiciendis et ducimus amet eaque alias iste impedit, quisquam quae eum odit!</p>
+          <p>Here are some checkbox and radios components, there is a few different versions :</p>
         </section>
       </div>
 
@@ -61,13 +62,14 @@
         <h2>Text inputs</h2>
       </header>
       <section>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad suscipit recusandae dolore quo minus voluptatem. Enim, non, aspernatur. Dolor, veritatis, minus. Beatae culpa officiis eum cupiditate quaerat inventore sunt consequuntur.</p>
+        <p>The Material design text inputs are made with a floating label, in Fram, the label is just the placeholder, that is turned into a label tag :</p>
       </section>
     </div>
     <div class="bit-2">
       <input type="text" placeholder="name" class="m-input-blue" />
-      <input type="text" placeholder="name" class="m-input-red" />
-      <input type="text" placeholder="name" class="m-input-green" />
+      <input type="text" placeholder="email" class="m-input-red" />
+      <input type="text" placeholder="A placeholder" class="m-input-green" />
+      <input type="text" placeholder="A long, really long placeholder" class="m-input-amber" />
     </div>
   </div>
 
@@ -75,14 +77,14 @@
   <div class="bit-1">
     <div class="bit-2">
       <header>
-        <h2>Range</h2>
+        <h2>Range Slider </h2>
       </header>
       <section>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic libero explicabo quae blanditiis obcaecati, aperiam, eum cum. Fugit, tempore, sequi iusto, corporis distinctio assumenda reprehenderit numquam provident repellat cumque sint.</p>
+        <p>An other beautiful component of Material design, is the range slider, there is two main versions, the regular one, and the 'discrete' one. The discrete range slider was made with the courstesy of <a href="http://twitter.com/thebabydino">Ana Maria Tudor (Aka @TheBabyDino)</a></p>
       </section>
     </div>
     <div class="bit-2">
-      <div class="bit-1">
+      <div class="bit-2">
         <header>
           <h4>With output</h4>
           <span class="divider"></span>
@@ -90,15 +92,15 @@
 
         <input type="range" min="0" max="100" class="m-input-range-lightblue" data-output="true"/>
       </div>
-      <div class="bit-1">
+      <div class="bit-2">
         <header>
           <h4>With expanded output</h4>
           <span class="divider"></span>
         </header>
 
-        <input type="range" min="0" max="100" class="m-input-range-cyan" data-output="true"/>
+        <input type="range" min="0" max="100" class="m-input-range-cyan" data-output-expand="true"/>
       </div>
-      <div class="bit-1">
+      <div class="bit-2">
         <header>
           <h4>Without output</h4>
           <span class="divider"></span>
@@ -108,12 +110,89 @@
 
       </div>
 
-      <div class="bit-1">
+      <div class="bit-2">
         <header>
           <h4>With steps</h4>
           <span class="divider"></span>
         </header>
-        <input type="range" min="0" max="100" step="10" class="m-input-range-green" data-output="true"/>
+        <input type="range" min="0" max="100" step="10" class="m-input-range-green"/>
+      </div>
+
+        <div class="bit-2">
+        <header>
+          <h4>With steps & output </h4>
+          <span class="divider"></span>
+        </header>
+        <input type="range" min="0" max="100" step="10" class="m-input-range-purple" data-output="true"/>
+      </div>
+
+        <div class="bit-2">
+        <header>
+          <h4>With steps & output expand</h4>
+          <span class="divider"></span>
+        </header>
+        <input type="range" min="0" max="100" step="10" class="m-input-range-lime" data-output-expand="true"/>
+      </div>
+    </div>
+  </div>
+  <div class="bit-1">
+    <div class="bit-2">
+      <header>
+        <h2>Discrete Range Slider</h2>
+      </header>
+      <section>
+        
+      </section>
+    </div>
+    <div class="bit-2">
+      <div class="bit-2">
+        <header>
+          <h4>With output</h4>
+          <span class="divider"></span>
+        </header>
+
+        <input type="range" min="0" max="100" class="m-input-range-discrete-lightblue" data-output="true"/>
+      </div>
+      <div class="bit-2">
+        <header>
+          <h4>With expanded output</h4>
+          <span class="divider"></span>
+        </header>
+
+        <input type="range" min="0" max="100" class="m-input-range-discrete-cyan" data-output-expand="true"/>
+      </div>
+      <div class="bit-2">
+        <header>
+          <h4>Without output</h4>
+          <span class="divider"></span>
+        </header>
+
+        <input type="range" min="0" max="100" class="m-input-range-discrete-red" />
+
+      </div>
+
+      <div class="bit-2">
+        <header>
+          <h4>With steps</h4>
+          <span class="divider"></span>
+        </header>
+        <input type="range" min="0" max="100" step="10" class="m-input-range-discrete-green"/>
+      </div>
+
+        <div class="bit-2">
+        <header>
+          <h4>With steps & output </h4>
+          <span class="divider"></span>
+        </header>
+        <input type="range" min="0" max="100" step="10" class="m-input-range-discrete-purple" data-output="true"/>
+      </div>
+
+        <div class="bit-2">
+        <header>
+          <h4>With steps & output expand</h4>
+          <span class="divider"></span>
+        </header>
+        <input type="range" min="0" max="100" step="10" class="m-input-range-discrete-lime" data-output-expand="true"/>
       </div>
     </div>
   </div>
@@ -129,7 +208,7 @@
 </div>
 
 
-<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../scripts/jquery.min.js"></script>
 <script src="../scripts/framaterial.js"></script>
 <script src="../scripts/main.js"></script>
 

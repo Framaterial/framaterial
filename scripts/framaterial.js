@@ -124,64 +124,64 @@ function navigation(){
           })
         }
 // When something is clicked, for example, the menu sidebar
-        $('*').on('click', function(){
-           if($('[class*="material-sidebar"]').attr('data-state') == 'closed'){
-          var shrunk = $('[class*="material-sidebar"]').width();
-          $this.addClass('shrunked').attr('data-shrunk', shrunk);
-          $this.css({
-            'width': '100%',
-            'float': 'right',
-            'right': '0',
-            'position': 'relative',
-            'top': '0',
-            'box-shadow': 'inset 2px 2px 4px rgba(0,0,0,.3)'
-          })
-        }
-        else{
-          var shrunk = $('[class*="material-sidebar"]').width();
-          $this.addClass('shrunked').attr('data-shrunk', shrunk);
-          $this.css({
-            'width': 'calc(100% - '+ shrunk+'px)',
-            'float': 'right',
-            'right': '0',
-            'position': 'relative',
-            'top': '60px',
-            'box-shadow': 'inset 2px 2px 4px rgba(0,0,0,.3)'
-          })
-        }
-        });
-      }
+$('*').on('click', function(){
+ if($('[class*="material-sidebar"]').attr('data-state') == 'closed'){
+  var shrunk = $('[class*="material-sidebar"]').width();
+  $this.addClass('shrunked').attr('data-shrunk', shrunk);
+  $this.css({
+    'width': '100%',
+    'float': 'right',
+    'right': '0',
+    'position': 'relative',
+    'top': '0',
+    'box-shadow': 'inset 2px 2px 4px rgba(0,0,0,.3)'
+  })
+}
+else{
+  var shrunk = $('[class*="material-sidebar"]').width();
+  $this.addClass('shrunked').attr('data-shrunk', shrunk);
+  $this.css({
+    'width': 'calc(100% - '+ shrunk+'px)',
+    'float': 'right',
+    'right': '0',
+    'position': 'relative',
+    'top': '60px',
+    'box-shadow': 'inset 2px 2px 4px rgba(0,0,0,.3)'
+  })
+}
+});
+}
 
       // If sidebar is on right, float header on left.
       else if($('body').find('[class*="material-sidebar-right"]')){
        if($('[class*="material-sidebar"]').attr('data-state') == 'closed'){
-          var shrunk = $('[class*="material-sidebar"]').width();
-          $this.addClass('shrunked').attr('data-shrunk', shrunk);
-          $this.css({
-            'width': '100%',
-            'float': 'left',
-            'left': '0',
-            'position': 'relative',
-            'top': '60px',
-            'box-shadow': 'inset 2px 2px 4px rgba(0,0,0,.3)'
-          })
-        }
-        else{
-          var shrunk = $('[class*="material-sidebar"]').width();
-          $this.addClass('shrunked').attr('data-shrunk', shrunk);
-          $this.css({
-            'width': 'calc(100% - '+ shrunk+'px)',
-            'float': 'left',
-            'left': '0',
-            'position': 'relative',
-            'top': '60px',
-            'box-shadow': 'inset 2px 2px 4px rgba(0,0,0,.3)'
-          })
-        }
+        var shrunk = $('[class*="material-sidebar"]').width();
+        $this.addClass('shrunked').attr('data-shrunk', shrunk);
+        $this.css({
+          'width': '100%',
+          'float': 'left',
+          'left': '0',
+          'position': 'relative',
+          'top': '60px',
+          'box-shadow': 'inset 2px 2px 4px rgba(0,0,0,.3)'
+        })
+      }
+      else{
+        var shrunk = $('[class*="material-sidebar"]').width();
+        $this.addClass('shrunked').attr('data-shrunk', shrunk);
+        $this.css({
+          'width': 'calc(100% - '+ shrunk+'px)',
+          'float': 'left',
+          'left': '0',
+          'position': 'relative',
+          'top': '60px',
+          'box-shadow': 'inset 2px 2px 4px rgba(0,0,0,.3)'
+        })
+      }
 
         // When something is clicked, for example, the menu sidebar
         $('*').on('click', function(){
-           if($('[class*="material-sidebar"]').attr('data-state') == 'closed'){
+         if($('[class*="material-sidebar"]').attr('data-state') == 'closed'){
           var shrunk = $('[class*="material-sidebar"]').width();
           $this.addClass('shrunked').attr('data-shrunk', shrunk);
           $this.css({
@@ -205,7 +205,7 @@ function navigation(){
             'box-shadow': 'inset 2px 2px 4px rgba(0,0,0,.3)'
           })
         }
-        });
+      });
       }
       else{
 
@@ -392,35 +392,35 @@ function toastsSnackbar(){
     });
   })
 
-  snacks.each(function(){
-    var $this = $(this);
-    var posY = $this.attr('data-snackbar-posy');
-    var posX = $this.attr('data-snackbar-posx');
-    var content = $this.attr('data-snackbar-inner');
-     var fadeTime = $this.attr('data-snackbar-fade-time');
-     var fadeTime = fadeTime*1000;
+snacks.each(function(){
+  var $this = $(this);
+  var posY = $this.attr('data-snackbar-posy');
+  var posX = $this.attr('data-snackbar-posx');
+  var content = $this.attr('data-snackbar-inner');
+  var fadeTime = $this.attr('data-snackbar-fade-time');
+  var fadeTime = fadeTime*1000;
 
-    idSnack++;
+  idSnack++;
 
-    /* If the fading time is not indicated, we add a generic one of 5 seconds */
-     if(!fadeTime){
-      $this.attr('data-snackbar-fade-time','5');
-    }
+  /* If the fading time is not indicated, we add a generic one of 5 seconds */
+  if(!fadeTime){
+    $this.attr('data-snackbar-fade-time','5');
+  }
 
-    $this.attr('id','call_snackbar_'+ idSnack)
+  $this.attr('id','call_snackbar_'+ idSnack)
 
-    $this.parent().append('<div class="m-snackbar-'+posX+'-'+posY+'" id="snackbar_'+idSnack+'"><p>'+ content +'</p></div>');
+  $this.parent().append('<div class="m-snackbar-'+posX+'-'+posY+'" id="snackbar_'+idSnack+'"><p>'+ content +'</p></div>');
 
-    $this.on('click', function(){
-     var thisId = $this.attr('id').replace('call_','');
-     $('[id*="'+thisId+'"]').toggleClass('on-screen');
-     $('[class*="m-snackbar"]').not('[class*="m-snackbar"]#'+thisId).removeClass('on-screen')
+  $this.on('click', function(){
+   var thisId = $this.attr('id').replace('call_','');
+   $('[id*="'+thisId+'"]').toggleClass('on-screen');
+   $('[class*="m-snackbar"]').not('[class*="m-snackbar"]#'+thisId).removeClass('on-screen')
 
-     setTimeout(function(){
-        $('[id*="'+thisId+'"]').removeClass('on-screen');
-      }, fadeTime);
-   });
-  })
+   setTimeout(function(){
+    $('[id*="'+thisId+'"]').removeClass('on-screen');
+  }, fadeTime);
+ });
+})
 }
 //------------------------------------------------------------------------------
 //
@@ -442,6 +442,8 @@ function materialInput(){
     if($this.attr('type') == 'text'){
       $this.wrap('<div class="material-input-group-text '+$cl+'">').after('<span class="highlight '+$cl+'"></span> <span class="bar '+$cl+'"></span><label class="text-input-label">'+ $placeholder +'</label>').attr('placeholder','');
     }
+
+    // Following lines are disabled because the ranges changed
     else if($this.attr('type') == 'range'){
       $this.wrap('<div class="material-input-group-range '+$cl+'">').after('<span class="highlight '+$cl+'"></span> <span class="bar '+$cl+'"></span><label class="text-input-label">'+ $placeholder +'</label>').attr('placeholder','');
     }
@@ -507,7 +509,7 @@ function rangeOutput(){
       $this.on('change', function(){
         setInterval(function(){
           $('#style_'+id+'').text('input[type*="range"]#'+idex+'::-webkit-slider-thumb:after{content:"'+$this.val()+'";}')
-        }, 150)
+        }, 5)
       });
       
     }
@@ -525,7 +527,7 @@ function rangeOutput(){
 }
 
 function rangeFiller(){
-  var range = $('[type*="range"]');
+  var range = $('[type*="range"]:not([class*="-discrete"])');
 
   range.each(function(){
 
@@ -566,6 +568,8 @@ function rangeFiller(){
 })
 }
 
+
+
 function inputIdentification(){
   var ips = $('[type*="checkbox"], [type*="radio"], [type*="range"]');
   var id = 0;
@@ -601,7 +605,6 @@ materialCheckboxesRadio();
 radioToggle();
 rangeOutput();  
 rangeFiller();
-
 }
 
 //------------------------------------------------------------------------------
@@ -943,3 +946,49 @@ deploy();
 
 
 });
+
+
+
+// *Thirdparty* Javascript additions 
+// New range functions, author @TheBabyDino 
+function rangeSlider(){
+  var s = document.createElement('style'), 
+  r = document.querySelector('input[type=range][class*="-discrete"]'), 
+  track_prefs = ['webkit-slider-runnable', 'moz-range'];
+
+  document.body.appendChild(s);
+
+  var getTrackStyleStr = function(el, val, prefs) {
+    var str = '', len = prefs.length;
+    
+    for(var i = 0; i < len; i++) {
+      str += '.js input[type=range]:focus::-' + prefs[i] + '-track{background-size:' + val + '}'
+    }
+    
+    return str;
+  };
+
+  var getTipStyleStr = function(el, val) {
+    var str = '.js input[type=range]:focus /deep/ #thumb:after{content:"' + 
+    val + '"}';
+    
+    return str;
+  };
+
+  var getValStr = function(el, p, i) {
+    var min = el.min || 0, 
+    perc = (el.max) ? ~~(100*(p - min)/(el.max - min)) : p, 
+    val = '20% 100%, ' + perc + '% 100%';
+    
+    return val;
+  };
+
+  r.addEventListener('input', function() {
+    s.textContent = getTrackStyleStr(
+      this, 
+      getValStr(this, this.value), 
+      track_prefs
+      );
+    s.textContent += getTipStyleStr(this, this.value);
+  }, false);
+}

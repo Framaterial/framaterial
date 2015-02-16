@@ -14,6 +14,7 @@ $sidebar-width: 240px;
   top: 0;
   overflow: hidden;
   transition: left .3s ease, right .3s ease, box-shadow .3s ease, width .3s ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
 
     // structure 
     header{

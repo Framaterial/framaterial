@@ -1,3 +1,4 @@
+
 input{
   &[type*="range"]{
     -webkit-appearance: none;
@@ -180,14 +181,14 @@ input{
     margin-left: 3px;
     border-radius: 50% 50% 50% 0;
     transform: rotate(-45deg) scale(0) translate(0);
-    transition: transform .2s ease;
+    transition: top .2s ease, transform 0s ;
     top: -28px!important;
     position: absolute;
 
   }
   &:after{
     transform: rotate(-45deg) scale(0) translate(0);
-    transition: transform .1s ease;
+    transition: top .2s ease, transform 0s ;
     font-size: 12px;
     font-weight: 600;
     width: 100%;
@@ -205,8 +206,7 @@ input{
     &:after{
       color: #fff;
       transform: rotate(0deg) scale(1) translate(-50%, -50%);
-      transition: transform .3s ease;
-
+      transition: top .2s ease, transform 0s ;
     }
   }
 }
@@ -221,13 +221,13 @@ input{
     margin-left: 3px;
     border-radius: 50% 50% 50% 0;
     transform: rotate(-45deg) scale(0) translate(0);
-    transition: transform .2s ease;
+    transition: top .2s ease, transform 0s ;
     top: -28px!important;
     position: absolute;
   }
   &:after{
     transform: rotate(-45deg) scale(0) translate(0);
-    transition: transform .1s ease;
+    transition: top .2s ease, transform 0s ;
     font-size: 12px;
     font-weight: 600;
     width: 100%;
@@ -244,8 +244,7 @@ input{
     &:after{
       color: #fff;
       transform: rotate(0deg) scale(1) translate(-50%, -50%);
-      transition: transform .3s ease;
-
+      transition: top .2s ease, transform 0s ;
     }
   }
 }
@@ -260,13 +259,13 @@ input{
     margin-left: 3px;
     border-radius: 50% 50% 50% 0;
     transform: rotate(-45deg) scale(0) translate(0);
-    transition: transform .2s ease;
+    transition: top .2s ease, transform 0s ;
     top: -28px!important;
     position: absolute;
   }
   &:after{
     transform: rotate(-45deg) scale(0) translate(0);
-    transition: transform .1s ease;
+    transition: top .2s ease, transform 0s ;
     font-size: 12px;
     font-weight: 600;
     width: 100%;
@@ -283,8 +282,7 @@ input{
     &:after{
       color: #fff;
       transform: rotate(0deg) scale(1) translate(-50%, -50%);
-      transition: transform .3s ease;
-
+      transition: top .2s ease, transform 0s ;
     }
   }
 }
